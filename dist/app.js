@@ -55,7 +55,7 @@ function stepQuantity(delta) {
     updateTotal();
 }
 function orderText(product, quantity, buyer) {
-    return ['TÙNG PERFUME — PHIẾU MUA HÀNG THAM KHẢO', 'Phiếu chưa được gửi tới cửa hàng.', '',
+    return ['kinguyenperfume — PHIẾU MUA HÀNG THAM KHẢO', 'Phiếu chưa được gửi tới cửa hàng.', '',
         'Sản phẩm: ' + product.brand + ' ' + product.name, 'Đơn giá: ' + money(product.price),
         'Số lượng: ' + quantity, 'Thành tiền: ' + money(product.price * quantity), '',
         'Họ và tên: ' + buyer.name, 'Số điện thoại: ' + buyer.phone, 'Địa chỉ: ' + buyer.address,
@@ -74,7 +74,7 @@ $('#purchase-form').addEventListener('submit', e => {
     const text = orderText(selectedProduct, Number($('#quantity').value), buyer);
     const url = URL.createObjectURL(new Blob(['\ufeff' + text], { type: 'text/plain;charset=utf-8' }));
     const a = document.createElement('a');
-    a.href = url; a.download = 'tung-perfume-phieu-mua-hang.txt';
+    a.href = url; a.download = 'kinguyenperfume-phieu-mua-hang.txt';
     document.body.append(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     $('#purchase-status').textContent = 'Đã tạo phiếu mua hàng để tải về máy. Phiếu chưa được gửi tới cửa hàng.';
