@@ -268,6 +268,20 @@
       <button class="close" aria-label="Đóng">×</button>
       <div id="detail-content"></div>
     </dialog>
+    <dialog id="order-success" aria-labelledby="success-title" aria-describedby="success-message">
+      <button type="button" class="close" aria-label="Đóng thông báo">×</button>
+      <div class="success-symbol" aria-hidden="true">✓</div>
+      <div class="eyebrow">KINGUYENPERFUME</div>
+      <h2 id="success-title">Cảm ơn bạn đã đặt mua!</h2>
+      <p id="success-message">Thông tin đặt mua đã được gửi.<br>Cửa hàng sẽ sớm liên hệ để xác nhận đơn hàng với bạn.</p>
+      <div class="success-contact">Vui lòng giữ điện thoại để nhận cuộc gọi xác nhận tại <strong id="success-phone"></strong>.</div>
+      <div class="success-summary">
+        <p id="success-product"></p>
+        <div><span>Số lượng</span><strong id="success-quantity"></strong></div>
+        <div><span>Tổng thanh toán</span><strong id="success-total"></strong></div>
+      </div>
+      <button type="button" class="button" id="success-continue" autofocus>Tiếp tục khám phá ↗</button>
+    </dialog>
     <script src="app.js"></script>
   </body>
 </html>

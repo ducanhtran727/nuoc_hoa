@@ -395,6 +395,21 @@ async function sendPurchase(payload) {
         clearTimeout(timeout);
     }
 }
+function showOrderSuccess(payload) {
+    $('#purchase').close();
+    $('#success-phone').textContent = payload.phone;
+    $('#success-product').textContent = payload.category;
+    $('#success-quantity').textContent = payload.quantity + ' chai';
+    $('#success-total').textContent = money(quote(Number(payload.quantity)).total);
+    $('#purchase-form').reset();
+    $('#purchase-status').textContent = '';
+    $('#order-success').showModal();
+    $('#success-continue').focus();
+}
+$('#success-continue').addEventListener('click', () => {
+    $('#order-success').close();
+    $('#collection').scrollIntoView({ behavior: 'smooth' });
+});
 $('#purchase-form').addEventListener('submit', async e => {
     e.preventDefault();
     if (isSubmitting) return;
@@ -415,7 +430,7 @@ $('#purchase-form').addEventListener('submit', async e => {
     $('#purchase-status').textContent = 'Đang gửi thông tin mua hàng...';
     try {
         await sendPurchase(payload);
-        $('#purchase-status').textContent = 'Đã gửi thông tin mua hàng. Cửa hàng sẽ liên hệ xác nhận với bạn.';
+        showOrderSuccess(payload);
     } catch (error) {
         $('#purchase-status').textContent = error.name === 'AbortError'
             ? 'Chưa nhận được xác nhận từ cửa hàng. Vui lòng kiểm tra lại trước khi gửi lại.'
