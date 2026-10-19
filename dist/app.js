@@ -1,5 +1,293 @@
-const names=[['Narciso Rodriguez','For Her EDP',3230000,1000000,'female'],['Narciso Rodriguez','Ambrée EDP',2000000,900000,'female'],['Emporio Armani','Stronger With You Absolutely',3300000,1000000,'male'],['Burberry','Her EDP',3360000,900000,'female'],['Lancôme','La Vie Est Belle Sparkling Edition',3300000,1000000,'female'],['Lancôme','Idôle Le Grand Parfum',3000000,1000000,'female'],['Bvlgari','Aqva Pour Homme',2450000,1000000,'male'],['Initio','Musk Therapy',6500000,1200000,'unisex'],['Prada','Paradoxe EDP',3500000,1000000,'female'],['Dior','Miss Dior Eau de Parfum',3300000,1000000,'female'],['Montblanc','Explorer',1480000,800000,'male'],['Montblanc','Signature',1900000,900000,'female'],['Giorgio Armani','Sì Passione',3300000,900000,'female'],['Gucci','Guilty Eau de Toilette',3500000,900000,'male'],['Ex Nihilo','Blue Talisman',10500000,2000000,'unisex'],['Mancera','Red Tobacco',2800000,1000000,'unisex'],['Les Liquides Imaginaires','Blanche Bête',6500000,1500000,'unisex'],['Dolce & Gabbana','The One EDP',2400000,1000000,'male'],['Dolce & Gabbana','Light Blue Pour Homme',2500000,1000000,'male'],['Dolce & Gabbana',"L’Impératrice 3 EDT",1600000,900000,'female'],['Le Labo','Another 13',4650000,1100000,'unisex'],['Musk','Kashmir',2450000,1000000,'unisex'],['Jean Paul Gaultier','So Scandal',3200000,1100000,'female'],['Jean Paul Gaultier','Scandal',4650000,1100000,'female']];
-const products = names.map((p, id) => ({ id, brand: p[0], name: p[1], price: 150000, gender: p[4] }));
+const products = [
+  {
+    "id": 0,
+    "brand": "Chanel",
+    "name": "Bleu de Chanel EDP",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-00.webp"
+  },
+  {
+    "id": 1,
+    "brand": "Carolina Herrera",
+    "name": "Good Girl EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-01.webp"
+  },
+  {
+    "id": 2,
+    "brand": "Chanel",
+    "name": "Coco Mademoiselle EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-02.webp"
+  },
+  {
+    "id": 3,
+    "brand": "Creed",
+    "name": "Aventus",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-03.webp"
+  },
+  {
+    "id": 4,
+    "brand": "Dior",
+    "name": "Miss Dior Absolutely Blooming EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-04.webp"
+  },
+  {
+    "id": 5,
+    "brand": "Gucci",
+    "name": "Bloom EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-05.webp"
+  },
+  {
+    "id": 6,
+    "brand": "Gucci",
+    "name": "Flora Gorgeous Gardenia EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-06.webp"
+  },
+  {
+    "id": 7,
+    "brand": "Jean Paul Gaultier",
+    "name": "Le Male Le Parfum EDP Intense",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-07.webp"
+  },
+  {
+    "id": 8,
+    "brand": "Jean Paul Gaultier",
+    "name": "So Scandal! EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-08.webp"
+  },
+  {
+    "id": 9,
+    "brand": "Kilian",
+    "name": "Black Phantom Memento Mori",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-09.webp"
+  },
+  {
+    "id": 10,
+    "brand": "Lancôme",
+    "name": "La Vie Est Belle EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-10.webp"
+  },
+  {
+    "id": 11,
+    "brand": "Le Labo",
+    "name": "Another 13",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-11.webp"
+  },
+  {
+    "id": 12,
+    "brand": "Le Labo",
+    "name": "Rose 31",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-12.webp"
+  },
+  {
+    "id": 13,
+    "brand": "Le Labo",
+    "name": "Santal 33 EDP",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-13.webp"
+  },
+  {
+    "id": 14,
+    "brand": "Maison Francis Kurkdjian",
+    "name": "Baccarat Rouge 540 Extrait de Parfum",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-14.webp"
+  },
+  {
+    "id": 15,
+    "brand": "Montblanc",
+    "name": "Explorer EDP",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-15.webp"
+  },
+  {
+    "id": 16,
+    "brand": "Narciso Rodriguez",
+    "name": "Pure Musc For Her EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-16.webp"
+  },
+  {
+    "id": 17,
+    "brand": "Kilian",
+    "name": "Good Girl Gone Bad",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-17.webp"
+  },
+  {
+    "id": 18,
+    "brand": "Dior",
+    "name": "Sauvage",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-18.webp"
+  },
+  {
+    "id": 19,
+    "brand": "Dolce & Gabbana",
+    "name": "Light Blue Eau Intense Pour Femme EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-19.webp"
+  },
+  {
+    "id": 20,
+    "brand": "Jean Paul Gaultier",
+    "name": "Scandal À Paris EDT",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-20.webp"
+  },
+  {
+    "id": 21,
+    "brand": "Lancôme",
+    "name": "Trésor Midnight Rose EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-21.webp"
+  },
+  {
+    "id": 22,
+    "brand": "Marc Jacobs",
+    "name": "Daisy Dream EDT",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-22.webp"
+  },
+  {
+    "id": 23,
+    "brand": "Montblanc",
+    "name": "Signature EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-23.webp"
+  },
+  {
+    "id": 24,
+    "brand": "Narciso Rodriguez",
+    "name": "Ambrée EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-24.webp"
+  },
+  {
+    "id": 25,
+    "brand": "Narciso Rodriguez",
+    "name": "For Her EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-25.webp"
+  },
+  {
+    "id": 26,
+    "brand": "Paco Rabanne",
+    "name": "Pure XS For Her EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-26.webp"
+  },
+  {
+    "id": 27,
+    "brand": "Parfums de Marly",
+    "name": "Delina",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-27.webp"
+  },
+  {
+    "id": 28,
+    "brand": "Versace",
+    "name": "Bright Crystal EDT",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-28.webp"
+  },
+  {
+    "id": 29,
+    "brand": "Parfums de Marly",
+    "name": "Valaya EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-29.webp"
+  },
+  {
+    "id": 30,
+    "brand": "Yves Saint Laurent",
+    "name": "Libre EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-30.webp"
+  },
+  {
+    "id": 31,
+    "brand": "Yves Saint Laurent",
+    "name": "Y EDP",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-31.webp"
+  }
+];
 const money = n => n.toLocaleString('vi-VN') + '₫';
 const $ = s => document.querySelector(s);
 const gender = { female: 'Nữ', male: 'Nam', unisex: 'Unisex' };
@@ -11,8 +299,8 @@ function render() {
     if ($('#sort').value !== 'default') list.sort((a, b) => $('#sort').value === 'asc' ? a.price - b.price : b.price - a.price);
     $('#result-count').textContent = list.length + ' mùi hương';
     $('#products').innerHTML = list.slice(0, limit).map(p => `<article class="product">
-        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="assets/product-${p.id}.webp" alt="${p.brand} ${p.name}" loading="lazy" width="500" height="500"></button>
-        <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · Nước hoa</div>
+        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy" decoding="async" width="960" height="960"></button>
+        <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · ${p.volume}</div>
         <div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div>
         <button class="buy" data-buy="${p.id}">Mua ngay <span>↗</span></button></article>`).join('') || '<p class="empty">Chưa tìm thấy mùi hương phù hợp. Thử tên khác nhé.</p>';
     $('#more').hidden = list.length <= limit;
@@ -53,10 +341,10 @@ function openPurchase(id) {
     selectedProduct = product;
     $('#purchase-form').reset();
     $('#purchase-status').textContent = '';
-    $('#purchase-image').src = `assets/product-${id}.webp`;
+    $('#purchase-image').src = product.image;
     $('#purchase-image').alt = product.brand + ' ' + product.name;
     $('#purchase-brand').textContent = product.brand;
-    $('#purchase-name').textContent = product.name;
+    $('#purchase-name').textContent = product.name + ' · ' + product.volume;
     $('#purchase-price').textContent = money(product.price);
     updateTotal();
     $('#purchase').showModal();
@@ -70,7 +358,7 @@ function stepQuantity(delta) {
 }
 function orderText(product, quantity, buyer) {
     return ['kinguyenperfume — PHIẾU MUA HÀNG THAM KHẢO', 'Phiếu chưa được gửi tới cửa hàng.', '',
-        'Sản phẩm: ' + product.brand + ' ' + product.name, 'Bảng giá đồng giá áp dụng cho tất cả mẫu',
+        'Sản phẩm: ' + product.brand + ' ' + product.name, 'Dung tích: ' + product.volume, 'Bảng giá đồng giá áp dụng cho tất cả mẫu',
         'Số lượng: ' + quantity, 'Tiền hàng: ' + money(quote(quantity).subtotal), 'Phí vận chuyển: ' + (quote(quantity).shipping ? money(quote(quantity).shipping) : 'Miễn phí'), 'Tổng thanh toán: ' + money(quote(quantity).total), '',
         'Họ và tên: ' + buyer.name, 'Số điện thoại: ' + buyer.phone, 'Địa chỉ: ' + buyer.address,
         'Ghi chú: ' + (buyer.note || 'Không có')].join('\n');
@@ -110,7 +398,7 @@ document.addEventListener('click', e => {
     const detail = e.target.closest('[data-detail]');
     if (detail) {
         const p = products[detail.dataset.detail];
-        $('#detail-content').innerHTML = `<img class="detail-img" src="assets/product-${p.id}.webp" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.brand}</p><div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div><p class="demo-note">Đồng giá tất cả mẫu: 1 chai 150.000đ + 22.000đ ship; 2 chai 289.000đ hoặc 3 chai 399.000đ, miễn phí ship.</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
+        $('#detail-content').innerHTML = `<img class="detail-img" src="${p.image}" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.volume}</p><div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div><p class="demo-note">Đồng giá tất cả mẫu: 1 chai 150.000đ + 22.000đ ship; 2 chai 289.000đ hoặc 3 chai 399.000đ, miễn phí ship.</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
         $('#detail').showModal();
     }
     const close = e.target.closest('.close');

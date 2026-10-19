@@ -1,0 +1,322 @@
+[
+  {
+    "id": 0,
+    "brand": "Chanel",
+    "name": "Bleu de Chanel EDP",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-00.webp",
+    "source": "Bleu de Chanel Eau de Parfum (EDP)- Nam .jpg"
+  },
+  {
+    "id": 1,
+    "brand": "Carolina Herrera",
+    "name": "Good Girl EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-01.webp",
+    "source": "Carolina Herrera Good Girl EDP - Nữ .jpg"
+  },
+  {
+    "id": 2,
+    "brand": "Chanel",
+    "name": "Coco Mademoiselle EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-02.webp",
+    "source": "Chanel Coco Mademoiselle EDP - Nữ.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "Creed",
+    "name": "Aventus",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-03.webp",
+    "source": "Creed Aventus- Nam.jpg"
+  },
+  {
+    "id": 4,
+    "brand": "Dior",
+    "name": "Miss Dior Absolutely Blooming EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-04.webp",
+    "source": "Dior Miss Dior Absolutely Blooming EDP - Nữ .jpg"
+  },
+  {
+    "id": 5,
+    "brand": "Gucci",
+    "name": "Bloom EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-05.webp",
+    "source": "Gucci Bloom Eau de Parfum (EDP) - Nữ.jpg"
+  },
+  {
+    "id": 6,
+    "brand": "Gucci",
+    "name": "Flora Gorgeous Gardenia EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-06.webp",
+    "source": "Gucci Flora Gorgeous Gardenia Eau de Parfum (EDP) - Nữ .jpg"
+  },
+  {
+    "id": 7,
+    "brand": "Jean Paul Gaultier",
+    "name": "Le Male Le Parfum EDP Intense",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-07.webp",
+    "source": "Jean Paul Gaultier Le Male Le Parfum Eau de Parfum Intense - Nam ..jpg"
+  },
+  {
+    "id": 8,
+    "brand": "Jean Paul Gaultier",
+    "name": "So Scandal! EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-08.webp",
+    "source": "Jean Paul Gaultier So Scandal! Eau de Parfum (EDP) - Nữ .jpg"
+  },
+  {
+    "id": 9,
+    "brand": "Kilian",
+    "name": "Black Phantom Memento Mori",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-09.webp",
+    "source": "Kilian Black Phantom Memento Mori - Unisex.jpg"
+  },
+  {
+    "id": 10,
+    "brand": "Lancôme",
+    "name": "La Vie Est Belle EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-10.webp",
+    "source": "Lancôme La Vie Est Belle Eau de Parfum (EDP) - Nữ.jpg"
+  },
+  {
+    "id": 11,
+    "brand": "Le Labo",
+    "name": "Another 13",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-11.webp",
+    "source": "Le Labo Another 13 - Unisex.jpg"
+  },
+  {
+    "id": 12,
+    "brand": "Le Labo",
+    "name": "Rose 31",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-12.webp",
+    "source": "Le Labo Rose 31 - Unisex.jpg"
+  },
+  {
+    "id": 13,
+    "brand": "Le Labo",
+    "name": "Santal 33 EDP",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-13.webp",
+    "source": "Le Labo Santal 33 Eau de Parfum (EDP) - Unisex.jpg"
+  },
+  {
+    "id": 14,
+    "brand": "Maison Francis Kurkdjian",
+    "name": "Baccarat Rouge 540 Extrait de Parfum",
+    "gender": "unisex",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-14.webp",
+    "source": "Maison Francis Kurkdjian Baccarat Rouge 540 Extrait de Parfum - Unisex.jpg"
+  },
+  {
+    "id": 15,
+    "brand": "Montblanc",
+    "name": "Explorer EDP",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-15.webp",
+    "source": "Montblanc Explorer Eau de Parfum - Nam.jpg"
+  },
+  {
+    "id": 16,
+    "brand": "Narciso Rodriguez",
+    "name": "Pure Musc For Her EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-16.webp",
+    "source": "Narciso Rodriguez Pure Musc For Her EDP - Nữ.jpg"
+  },
+  {
+    "id": 17,
+    "brand": "Kilian",
+    "name": "Good Girl Gone Bad",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-17.webp",
+    "source": "nước hoa Kilian Good Girl Gone Bad - Nữ .jpg"
+  },
+  {
+    "id": 18,
+    "brand": "Dior",
+    "name": "Sauvage",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-18.webp",
+    "source": "Nước hoa nam Dior Sauvage - Nam.jpg"
+  },
+  {
+    "id": 19,
+    "brand": "Dolce & Gabbana",
+    "name": "Light Blue Eau Intense Pour Femme EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-19.webp",
+    "source": "Nước Hoa Nữ Dolce & Gabbana Light Blue Eau Intense Pour Femme EDP.jpg"
+  },
+  {
+    "id": 20,
+    "brand": "Jean Paul Gaultier",
+    "name": "Scandal À Paris EDT",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-20.webp",
+    "source": "nước hoa nữ Jean Paul Gaultier Scandal A Paris EDT.jpg"
+  },
+  {
+    "id": 21,
+    "brand": "Lancôme",
+    "name": "Trésor Midnight Rose EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-21.webp",
+    "source": "nước hoa nữ Lancôme Trésor Midnight Rose Eau de Parfum (EDP).jpg"
+  },
+  {
+    "id": 22,
+    "brand": "Marc Jacobs",
+    "name": "Daisy Dream EDT",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-22.webp",
+    "source": "Nước hoa nữ Marc Jacobs Daisy Dream Eau de Toilette (EDT).jpg"
+  },
+  {
+    "id": 23,
+    "brand": "Montblanc",
+    "name": "Signature EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-23.webp",
+    "source": "nước hoa nữ Montblanc Signature Eau de Parfum (EDP).jpg"
+  },
+  {
+    "id": 24,
+    "brand": "Narciso Rodriguez",
+    "name": "Ambrée EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-24.webp",
+    "source": "Nước hoa nữ Narciso Rodriguez Ambrée Eau de Parfum (EDP).jpg"
+  },
+  {
+    "id": 25,
+    "brand": "Narciso Rodriguez",
+    "name": "For Her EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-25.webp",
+    "source": "nước hoa nữ Narciso Rodriguez For Her Eau de Parfum (EDP).jpg"
+  },
+  {
+    "id": 26,
+    "brand": "Paco Rabanne",
+    "name": "Pure XS For Her EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-26.webp",
+    "source": "Nước hoa nữ Paco Rabanne Pure XS For Her EDP.jpg"
+  },
+  {
+    "id": 27,
+    "brand": "Parfums de Marly",
+    "name": "Delina",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-27.webp",
+    "source": "nước hoa nữ Parfums de Marly Delina .jpg"
+  },
+  {
+    "id": 28,
+    "brand": "Versace",
+    "name": "Bright Crystal EDT",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-28.webp",
+    "source": "nước hoa nữ Versace Bright Crystal Eau de Toilette (EDT).jpg"
+  },
+  {
+    "id": 29,
+    "brand": "Parfums de Marly",
+    "name": "Valaya EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-29.webp",
+    "source": "Parfums de Marly Valaya Eau de Parfum - Nữ.png"
+  },
+  {
+    "id": 30,
+    "brand": "Yves Saint Laurent",
+    "name": "Libre EDP",
+    "gender": "female",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-30.webp",
+    "source": "Yves Saint Laurent Libre EDP (Eau de Parfum) - Nữ .jpg"
+  },
+  {
+    "id": 31,
+    "brand": "Yves Saint Laurent",
+    "name": "Y EDP",
+    "gender": "male",
+    "price": 150000,
+    "volume": "Chiết 10ml",
+    "image": "assets/catalog/perfume-31.webp",
+    "source": "Yves Saint Laurent Y Eau de Parfum (YSL Y EDP) - NAm .jpg"
+  }
+]
