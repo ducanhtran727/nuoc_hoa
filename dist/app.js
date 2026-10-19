@@ -11,7 +11,7 @@ function render() {
     if ($('#sort').value !== 'default') list.sort((a, b) => $('#sort').value === 'asc' ? a.price - b.price : b.price - a.price);
     $('#result-count').textContent = list.length + ' mùi hương';
     $('#products').innerHTML = list.slice(0, limit).map(p => `<article class="product">
-        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="assets/product-${p.id}.jpg" alt="${p.brand} ${p.name}" loading="lazy" width="500" height="500"></button>
+        <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="assets/product-${p.id}.webp" alt="${p.brand} ${p.name}" loading="lazy" width="500" height="500"></button>
         <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · Nước hoa</div>
         <div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div>
         <button class="buy" data-buy="${p.id}">Mua ngay <span>↗</span></button></article>`).join('') || '<p class="empty">Chưa tìm thấy mùi hương phù hợp. Thử tên khác nhé.</p>';
@@ -53,7 +53,7 @@ function openPurchase(id) {
     selectedProduct = product;
     $('#purchase-form').reset();
     $('#purchase-status').textContent = '';
-    $('#purchase-image').src = `assets/product-${id}.jpg`;
+    $('#purchase-image').src = `assets/product-${id}.webp`;
     $('#purchase-image').alt = product.brand + ' ' + product.name;
     $('#purchase-brand').textContent = product.brand;
     $('#purchase-name').textContent = product.name;
@@ -110,7 +110,7 @@ document.addEventListener('click', e => {
     const detail = e.target.closest('[data-detail]');
     if (detail) {
         const p = products[detail.dataset.detail];
-        $('#detail-content').innerHTML = `<img class="detail-img" src="assets/product-${p.id}.jpg" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.brand}</p><div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div><p class="demo-note">Đồng giá tất cả mẫu: 1 chai 150.000đ + 22.000đ ship; 2 chai 289.000đ hoặc 3 chai 399.000đ, miễn phí ship.</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
+        $('#detail-content').innerHTML = `<img class="detail-img" src="assets/product-${p.id}.webp" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.brand}</p><div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div><p class="demo-note">Đồng giá tất cả mẫu: 1 chai 150.000đ + 22.000đ ship; 2 chai 289.000đ hoặc 3 chai 399.000đ, miễn phí ship.</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
         $('#detail').showModal();
     }
     const close = e.target.closest('.close');
