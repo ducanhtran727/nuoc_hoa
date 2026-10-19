@@ -1,5 +1,5 @@
 const names=[['Narciso Rodriguez','For Her EDP',3230000,1000000,'female'],['Narciso Rodriguez','Ambrée EDP',2000000,900000,'female'],['Emporio Armani','Stronger With You Absolutely',3300000,1000000,'male'],['Burberry','Her EDP',3360000,900000,'female'],['Lancôme','La Vie Est Belle Sparkling Edition',3300000,1000000,'female'],['Lancôme','Idôle Le Grand Parfum',3000000,1000000,'female'],['Bvlgari','Aqva Pour Homme',2450000,1000000,'male'],['Initio','Musk Therapy',6500000,1200000,'unisex'],['Prada','Paradoxe EDP',3500000,1000000,'female'],['Dior','Miss Dior Eau de Parfum',3300000,1000000,'female'],['Montblanc','Explorer',1480000,800000,'male'],['Montblanc','Signature',1900000,900000,'female'],['Giorgio Armani','Sì Passione',3300000,900000,'female'],['Gucci','Guilty Eau de Toilette',3500000,900000,'male'],['Ex Nihilo','Blue Talisman',10500000,2000000,'unisex'],['Mancera','Red Tobacco',2800000,1000000,'unisex'],['Les Liquides Imaginaires','Blanche Bête',6500000,1500000,'unisex'],['Dolce & Gabbana','The One EDP',2400000,1000000,'male'],['Dolce & Gabbana','Light Blue Pour Homme',2500000,1000000,'male'],['Dolce & Gabbana',"L’Impératrice 3 EDT",1600000,900000,'female'],['Le Labo','Another 13',4650000,1100000,'unisex'],['Musk','Kashmir',2450000,1000000,'unisex'],['Jean Paul Gaultier','So Scandal',3200000,1100000,'female'],['Jean Paul Gaultier','Scandal',4650000,1100000,'female']];
-const products = names.map((p, id) => ({ id, brand: p[0], name: p[1], old: p[2], price: p[3], gender: p[4] }));
+const products = names.map((p, id) => ({ id, brand: p[0], name: p[1], price: 150000, gender: p[4] }));
 const money = n => n.toLocaleString('vi-VN') + '₫';
 const $ = s => document.querySelector(s);
 const gender = { female: 'Nữ', male: 'Nam', unisex: 'Unisex' };
@@ -13,24 +13,38 @@ function render() {
     $('#products').innerHTML = list.slice(0, limit).map(p => `<article class="product">
         <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="assets/product-${p.id}.jpg" alt="${p.brand} ${p.name}" loading="lazy" width="500" height="500"></button>
         <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · Nước hoa</div>
-        <div class="prices"><strong>${money(p.price)}</strong><del>${money(p.old)}</del></div>
+        <div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div>
         <button class="buy" data-buy="${p.id}">Mua ngay <span>↗</span></button></article>`).join('') || '<p class="empty">Chưa tìm thấy mùi hương phù hợp. Thử tên khác nhé.</p>';
     $('#more').hidden = list.length <= limit;
 }
 
 function validQuantity(value) {
     const quantity = Number(value);
-    return Number.isInteger(quantity) && quantity >= 1 && quantity <= 999;
+    return Number.isInteger(quantity) && quantity >= 1 && quantity <= 3;
+}
+function quote(quantity) {
+    if (!validQuantity(quantity)) throw new RangeError('Số lượng phải từ 1 đến 3.');
+    const subtotal = {1: 150000, 2: 289000, 3: 399000}[quantity];
+    const shipping = Number(quantity) === 1 ? 22000 : 0;
+    return {subtotal, shipping, total: subtotal + shipping};
 }
 function updateTotal() {
     const input = $('#quantity');
     const valid = validQuantity(input.value);
-    input.setCustomValidity(valid ? '' : 'Vui lòng nhập số lượng nguyên từ 1 đến 999.');
+    input.setCustomValidity(valid ? '' : 'Vui lòng nhập số lượng nguyên từ 1 đến 3.');
     input.setAttribute('aria-invalid', String(!valid));
     $('#quantity-error').hidden = valid;
-    $('#purchase-total').textContent = valid && selectedProduct ? money(selectedProduct.price * Number(input.value)) : '—';
+    const price = valid && selectedProduct ? quote(Number(input.value)) : null;
+    $('#purchase-subtotal').textContent = price ? money(price.subtotal) : '—';
+    $('#purchase-shipping').textContent = price ? (price.shipping ? money(price.shipping) : 'Miễn phí') : '—';
+    $('#purchase-total').textContent = price ? money(price.total) : '—';
+    document.querySelectorAll('[data-bundle]').forEach(button => {
+        const active = valid && Number(button.dataset.bundle) === Number(input.value);
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+    });
     $('#quantity-minus').disabled = valid && Number(input.value) <= 1;
-    $('#quantity-plus').disabled = valid && Number(input.value) >= 999;
+    $('#quantity-plus').disabled = valid && Number(input.value) >= 3;
 }
 function openPurchase(id) {
     const product = products[id];
@@ -51,13 +65,13 @@ function openPurchase(id) {
 }
 function stepQuantity(delta) {
     const input = $('#quantity');
-    input.value = validQuantity(input.value) ? Math.min(999, Math.max(1, Number(input.value) + delta)) : 1;
+    input.value = validQuantity(input.value) ? Math.min(3, Math.max(1, Number(input.value) + delta)) : 1;
     updateTotal();
 }
 function orderText(product, quantity, buyer) {
     return ['kinguyenperfume — PHIẾU MUA HÀNG THAM KHẢO', 'Phiếu chưa được gửi tới cửa hàng.', '',
-        'Sản phẩm: ' + product.brand + ' ' + product.name, 'Đơn giá: ' + money(product.price),
-        'Số lượng: ' + quantity, 'Thành tiền: ' + money(product.price * quantity), '',
+        'Sản phẩm: ' + product.brand + ' ' + product.name, 'Bảng giá đồng giá áp dụng cho tất cả mẫu',
+        'Số lượng: ' + quantity, 'Tiền hàng: ' + money(quote(quantity).subtotal), 'Phí vận chuyển: ' + (quote(quantity).shipping ? money(quote(quantity).shipping) : 'Miễn phí'), 'Tổng thanh toán: ' + money(quote(quantity).total), '',
         'Họ và tên: ' + buyer.name, 'Số điện thoại: ' + buyer.phone, 'Địa chỉ: ' + buyer.address,
         'Ghi chú: ' + (buyer.note || 'Không có')].join('\n');
 }
@@ -82,6 +96,10 @@ $('#purchase-form').addEventListener('submit', e => {
 for (const selector of ['#buyer-name', '#buyer-phone', '#buyer-address']) {
     $(selector).addEventListener('input', () => $(selector).setCustomValidity(''));
 }
+document.querySelectorAll('[data-bundle]').forEach(button => button.addEventListener('click', () => {
+    $('#quantity').value = button.dataset.bundle;
+    updateTotal();
+}));
 $('#quantity').addEventListener('input', updateTotal);
 $('#quantity-minus').onclick = () => stepQuantity(-1);
 $('#quantity-plus').onclick = () => stepQuantity(1);
@@ -92,7 +110,7 @@ document.addEventListener('click', e => {
     const detail = e.target.closest('[data-detail]');
     if (detail) {
         const p = products[detail.dataset.detail];
-        $('#detail-content').innerHTML = `<img class="detail-img" src="assets/product-${p.id}.jpg" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.brand}</p><div class="prices"><strong>${money(p.price)}</strong><del>${money(p.old)}</del></div><p class="demo-note">Ảnh và giá tham khảo từ trang mẫu. Cần xác nhận dung tích, giá và tồn kho với cửa hàng trước khi mua.</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
+        $('#detail-content').innerHTML = `<img class="detail-img" src="assets/product-${p.id}.jpg" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.brand}</p><div class="prices"><strong>${money(p.price)}</strong><span class="bundle-hint">2 chai 289k · 3 chai 399k</span></div><p class="demo-note">Đồng giá tất cả mẫu: 1 chai 150.000đ + 22.000đ ship; 2 chai 289.000đ hoặc 3 chai 399.000đ, miễn phí ship.</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
         $('#detail').showModal();
     }
     const close = e.target.closest('.close');
