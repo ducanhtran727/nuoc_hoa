@@ -4,6 +4,45 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>kinguyenperfume — Dấu hương của riêng bạn</title>
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+
+      // THAY ID CỦA BẠN VÀO ĐÂY
+      fbq("init", "2174887373404207");
+
+      fbq("track", "PageView");
+      fbq("track", "ViewContent");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2174887373404207&ev=PageView&noscript=1"
+      />
+    </noscript>
     <meta
       name="description"
       content="Khám phá bộ sưu tập nước hoa tại kinguyenperfume. Tìm mùi hương dành riêng cho bạn."
@@ -268,19 +307,33 @@
       <button class="close" aria-label="Đóng">×</button>
       <div id="detail-content"></div>
     </dialog>
-    <dialog id="order-success" aria-labelledby="success-title" aria-describedby="success-message">
+    <dialog
+      id="order-success"
+      aria-labelledby="success-title"
+      aria-describedby="success-message"
+    >
       <button type="button" class="close" aria-label="Đóng thông báo">×</button>
       <div class="success-symbol" aria-hidden="true">✓</div>
       <div class="eyebrow">KINGUYENPERFUME</div>
       <h2 id="success-title">Cảm ơn bạn đã đặt mua!</h2>
-      <p id="success-message">Thông tin đặt mua đã được gửi.<br>Cửa hàng sẽ sớm liên hệ để xác nhận đơn hàng với bạn.</p>
-      <div class="success-contact">Vui lòng giữ điện thoại để nhận cuộc gọi xác nhận tại <strong id="success-phone"></strong>.</div>
+      <p id="success-message">
+        Thông tin đặt mua đã được gửi.<br />Cửa hàng sẽ sớm liên hệ để xác nhận
+        đơn hàng với bạn.
+      </p>
+      <div class="success-contact">
+        Vui lòng giữ điện thoại để nhận cuộc gọi xác nhận tại
+        <strong id="success-phone"></strong>.
+      </div>
       <div class="success-summary">
         <p id="success-product"></p>
         <div><span>Số lượng</span><strong id="success-quantity"></strong></div>
-        <div><span>Tổng thanh toán</span><strong id="success-total"></strong></div>
+        <div>
+          <span>Tổng thanh toán</span><strong id="success-total"></strong>
+        </div>
       </div>
-      <button type="button" class="button" id="success-continue" autofocus>Tiếp tục khám phá ↗</button>
+      <button type="button" class="button" id="success-continue" autofocus>
+        Tiếp tục khám phá ↗
+      </button>
     </dialog>
     <script src="app.js"></script>
   </body>
