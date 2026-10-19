@@ -377,17 +377,20 @@ async function sendPurchase(payload) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 20000);
     try {
-        // URLSearchParams gửi dạng form; Apps Script đọc qua e.parameter.
-        // Không dùng no-cors: chỉ báo thành công khi nhận được xác nhận từ server.
         const response = await fetch(URLscript, {
             method: 'POST',
             body: new URLSearchParams(payload),
-            signal: controller.signal,
-            redirect: 'follow'
+            signal: controller.signal
         });
-        if (!response.ok) throw new Error('Server chưa xác nhận đơn hàng. Vui lòng kiểm tra lại trước khi gửi lại.');
-        const result = await response.json();
-        if (result.success !== true) throw new Error('Chưa thể ghi đơn hàng. Vui lòng kiểm tra lại trước khi gửi lại.');
+        if (!response.ok) throw new Error('Chưa gửi được thông tin. Vui lòng kiểm tra trước khi gửi lại.');
+        // Script có thể trả text, {result:"success"} hoặc {success:true}.
+        // Chỉ chặn khi phản hồi JSON ghi rõ có lỗi.
+        const text = await response.text();
+        let result;
+        try { result = JSON.parse(text); } catch { /* Phản hồi text cũng hợp lệ. */ }
+        if (result && (result.success === false || result.result === 'error' || result.status === 'error' || result.error)) {
+            throw new Error('Cửa hàng chưa xác nhận đơn. Vui lòng kiểm tra trước khi gửi lại.');
+        }
     } finally {
         clearTimeout(timeout);
     }
@@ -412,7 +415,7 @@ $('#purchase-form').addEventListener('submit', async e => {
     $('#purchase-status').textContent = 'Đang gửi thông tin mua hàng...';
     try {
         await sendPurchase(payload);
-        $('#purchase-status').textContent = 'Đã nhận thông tin mua hàng. Cửa hàng sẽ liên hệ xác nhận với bạn.';
+        $('#purchase-status').textContent = 'Đã gửi thông tin mua hàng. Cửa hàng sẽ liên hệ xác nhận với bạn.';
     } catch (error) {
         $('#purchase-status').textContent = error.name === 'AbortError'
             ? 'Chưa nhận được xác nhận từ cửa hàng. Vui lòng kiểm tra lại trước khi gửi lại.'
