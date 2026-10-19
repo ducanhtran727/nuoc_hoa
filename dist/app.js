@@ -1,3 +1,7 @@
+// Dán URL Web App Google Apps Script (đuôi /exec) vào đây.
+const URLscript = '';
+let isSubmitting = false;
+
 const products = [
   {
     "id": 0,
@@ -335,6 +339,7 @@ function updateTotal() {
     $('#quantity-plus').disabled = valid && Number(input.value) >= 3;
 }
 function openPurchase(id) {
+    if (isSubmitting) return;
     const product = products[id];
     if (!product) return;
     if ($('#detail').open) $('#detail').close();
@@ -356,15 +361,40 @@ function stepQuantity(delta) {
     input.value = validQuantity(input.value) ? Math.min(3, Math.max(1, Number(input.value) + delta)) : 1;
     updateTotal();
 }
-function orderText(product, quantity, buyer) {
-    return ['kinguyenperfume — PHIẾU MUA HÀNG THAM KHẢO', 'Phiếu chưa được gửi tới cửa hàng.', '',
-        'Sản phẩm: ' + product.brand + ' ' + product.name, 'Dung tích: ' + product.volume, 'Bảng giá đồng giá áp dụng cho tất cả mẫu',
-        'Số lượng: ' + quantity, 'Tiền hàng: ' + money(quote(quantity).subtotal), 'Phí vận chuyển: ' + (quote(quantity).shipping ? money(quote(quantity).shipping) : 'Miễn phí'), 'Tổng thanh toán: ' + money(quote(quantity).total), '',
-        'Họ và tên: ' + buyer.name, 'Số điện thoại: ' + buyer.phone, 'Địa chỉ: ' + buyer.address,
-        'Ghi chú: ' + (buyer.note || 'Không có')].join('\n');
+function purchasePayload(product, quantity, buyer) {
+    return {
+        fullname: buyer.name,
+        phone: buyer.phone,
+        address: buyer.address,
+        quantity: String(quantity),
+        category: product.brand + ' ' + product.name + ' · ' + product.volume,
+        note: buyer.note,
+        timestamp: new Date().toISOString()
+    };
 }
-$('#purchase-form').addEventListener('submit', e => {
+async function sendPurchase(payload) {
+    if (!URLscript.trim()) throw new Error('Chức năng đặt hàng chưa được kết nối. Vui lòng thử lại sau.');
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+        // URLSearchParams gửi dạng form; Apps Script đọc qua e.parameter.
+        // Không dùng no-cors: chỉ báo thành công khi nhận được xác nhận từ server.
+        const response = await fetch(URLscript, {
+            method: 'POST',
+            body: new URLSearchParams(payload),
+            signal: controller.signal,
+            redirect: 'follow'
+        });
+        if (!response.ok) throw new Error('Server chưa xác nhận đơn hàng. Vui lòng kiểm tra lại trước khi gửi lại.');
+        const result = await response.json();
+        if (result.success !== true) throw new Error('Chưa thể ghi đơn hàng. Vui lòng kiểm tra lại trước khi gửi lại.');
+    } finally {
+        clearTimeout(timeout);
+    }
+}
+$('#purchase-form').addEventListener('submit', async e => {
     e.preventDefault();
+    if (isSubmitting) return;
     updateTotal();
     const buyer = { name: $('#buyer-name').value.trim(), phone: $('#buyer-phone').value.trim(), address: $('#buyer-address').value.trim(), note: $('#buyer-note').value.trim() };
     for (const [key, selector] of [['name', '#buyer-name'], ['address', '#buyer-address']]) {
@@ -373,13 +403,27 @@ $('#purchase-form').addEventListener('submit', e => {
     const phoneDigits = buyer.phone.replace(/\D/g, '');
     $('#buyer-phone').setCustomValidity(phoneDigits.length >= 9 && phoneDigits.length <= 15 ? '' : 'Vui lòng nhập số điện thoại hợp lệ (9–15 chữ số).');
     if (!selectedProduct || !$('#purchase-form').reportValidity()) return;
-    const text = orderText(selectedProduct, Number($('#quantity').value), buyer);
-    const url = URL.createObjectURL(new Blob(['\ufeff' + text], { type: 'text/plain;charset=utf-8' }));
-    const a = document.createElement('a');
-    a.href = url; a.download = 'kinguyenperfume-phieu-mua-hang.txt';
-    document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-    $('#purchase-status').textContent = 'Đã tạo phiếu mua hàng để tải về máy. Phiếu chưa được gửi tới cửa hàng.';
+    const payload = purchasePayload(selectedProduct, Number($('#quantity').value), buyer);
+    const submitButton = $('#purchase-form button[type="submit"]');
+    const originalLabel = submitButton.textContent;
+    isSubmitting = true;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Đang gửi...';
+    $('#purchase-status').textContent = 'Đang gửi thông tin mua hàng...';
+    try {
+        await sendPurchase(payload);
+        $('#purchase-status').textContent = 'Đã nhận thông tin mua hàng. Cửa hàng sẽ liên hệ xác nhận với bạn.';
+    } catch (error) {
+        $('#purchase-status').textContent = error.name === 'AbortError'
+            ? 'Chưa nhận được xác nhận từ cửa hàng. Vui lòng kiểm tra lại trước khi gửi lại.'
+            : error instanceof TypeError || error instanceof SyntaxError
+                ? 'Không nhận được xác nhận đơn hàng. Vui lòng kiểm tra lại trước khi gửi lại.'
+                : error.message;
+    } finally {
+        isSubmitting = false;
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
+    }
 });
 for (const selector of ['#buyer-name', '#buyer-phone', '#buyer-address']) {
     $(selector).addEventListener('input', () => $(selector).setCustomValidity(''));
