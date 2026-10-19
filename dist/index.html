@@ -16,26 +16,13 @@
                 href="#guide">Chọn mùi hương</a></nav><a class="header-buy" href="#collection">Chọn mua ↗</a>
     </header>
     <main>
-        <section class="hero">
-            <div class="hero-copy">
-                <div class="eyebrow">THE PERFUME COLLECTION</div>
-                <h1>Một mùi hương.<br>Một <em>dấu ấn riêng.</em></h1>
-                <p>Có những điều chẳng cần cất lời.<br>Hãy để hương thơm kể câu chuyện của bạn.</p><a class="button"
-                    href="#collection">Khám phá bộ sưu tập <span>↗</span></a>
-                <div class="hero-note">TINH TẾ TRONG TỪNG TẦNG HƯƠNG</div>
-            </div>
-            <div class="hero-art">
-                <div class="halo"></div><span class="art-caption">L’ART DU PARFUM</span>
-                <div class="bottle bottle-back">
-                    <div class="cap"></div>
-                    <div class="glass"><span>TÙNG<br><small>BOIS INTENSE<br>EAU DE PARFUM</small></span></div>
-                </div>
-                <div class="bottle bottle-front">
-                    <div class="cap"></div>
-                    <div class="glass"><span>TÙNG<br><small>FLEUR DE SOIE<br>EAU DE PARFUM</small></span></div>
-                </div>
-                <div class="stone"></div><span class="art-bottom">A SCENT TO REMEMBER. <span>01 / 03</span></span>
-            </div>
+        <section class="cover" aria-label="Kỉ Nguyên — Authentic Perfume">
+            <h1 class="sr-only">Kỉ Nguyên — Hương Thơm Thật, Giá Trị Thật</h1>
+            <picture>
+                <source media="(max-width: 767px)" srcset="assets/cover-mobile.png" width="1086" height="1448">
+                <img src="assets/cover-desktop.png" alt="Kỉ Nguyên Authentic Perfume — Hương Thơm Thật, Giá Trị Thật. Cam kết hàng chính hãng, giao hàng toàn quốc, đa dạng thương hiệu và tư vấn tận tâm." width="2056" height="765" fetchpriority="high" decoding="async">
+            </picture>
+            <div class="cover-action"><a class="button" href="#collection">Khám phá bộ sưu tập <span>↗</span></a></div>
         </section>
         <div class="benefits"><span>◇ <b>Tuyển chọn mùi hương</b></span><span>✧ <b>Đa dạng phong cách</b></span><span>↗
                 <b>Dễ dàng lựa chọn</b></span></div>
@@ -117,7 +104,7 @@
             <p id="quantity-error" class="field-error" role="status" hidden>Vui lòng nhập số lượng nguyên từ 1 đến 999.</p>
             <label for="buyer-note">Ghi chú <small>(không bắt buộc)</small></label>
             <textarea id="buyer-note" name="note" placeholder="Lời nhắn hoặc yêu cầu thêm của bạn" maxlength="1000" rows="2"></textarea>
-            <button class="button purchase-submit" type="submit">Tạo phiếu mua hàng ↗</button>
+            <button class="button purchase-submit" type="submit">Đặt mua ↗</button>
             <p class="demo-note">Phiếu mua hàng được tải về máy của bạn, chưa gửi tới cửa hàng.</p>
             <p id="purchase-status" role="status"></p>
         </form>
