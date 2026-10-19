@@ -1,5 +1,5 @@
 // Dán URL Web App Google Apps Script (đuôi /exec) vào đây.
-const URLscript = '';
+const URLscript = 'https://script.google.com/macros/s/AKfycbz93Qui7gLMjYwA6vEFj0GH7iUwys_WoKrK7Lrqkjl2qI1Eq0N87dJ9_bWe9rZoi_IM/exec';
 let isSubmitting = false;
 
 const products = [
@@ -401,7 +401,7 @@ $('#purchase-form').addEventListener('submit', async e => {
         $(selector).setCustomValidity(buyer[key] ? '' : 'Vui lòng nhập thông tin.');
     }
     const phoneDigits = buyer.phone.replace(/\D/g, '');
-    $('#buyer-phone').setCustomValidity(phoneDigits.length >= 9 && phoneDigits.length <= 15 ? '' : 'Vui lòng nhập số điện thoại hợp lệ (9–15 chữ số).');
+    $('#buyer-phone').setCustomValidity(/^[+0-9() .-]+$/.test(buyer.phone) && phoneDigits.length >= 9 && phoneDigits.length <= 15 ? '' : 'Vui lòng nhập số điện thoại hợp lệ (9–15 chữ số).');
     if (!selectedProduct || !$('#purchase-form').reportValidity()) return;
     const payload = purchasePayload(selectedProduct, Number($('#quantity').value), buyer);
     const submitButton = $('#purchase-form button[type="submit"]');

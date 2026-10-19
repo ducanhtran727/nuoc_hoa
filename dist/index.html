@@ -154,10 +154,22 @@
         </div>
       </div>
       <form id="purchase-form">
-        <fieldset class="bundle-options"><legend>Chọn ưu đãi · Đồng giá tất cả mẫu</legend>
-          <button type="button" data-bundle="1" aria-pressed="true" class="active"><b>1 chai · 150.000đ</b><span>+ 22.000đ ship</span></button>
-          <button type="button" data-bundle="2" aria-pressed="false"><b>2 chai · 289.000đ</b><span>Miễn phí ship</span></button>
-          <button type="button" data-bundle="3" aria-pressed="false"><b>3 chai · 399.000đ</b><span>Miễn phí ship</span></button>
+        <fieldset class="bundle-options">
+          <legend>Chọn ưu đãi · Đồng giá tất cả mẫu</legend>
+          <button
+            type="button"
+            data-bundle="1"
+            aria-pressed="true"
+            class="active"
+          >
+            <b>1 chai · 150.000đ</b><span>+ 22.000đ ship</span>
+          </button>
+          <button type="button" data-bundle="2" aria-pressed="false">
+            <b>2 chai · 289.000đ</b><span>Miễn phí ship</span>
+          </button>
+          <button type="button" data-bundle="3" aria-pressed="false">
+            <b>3 chai · 399.000đ</b><span>Miễn phí ship</span>
+          </button>
         </fieldset>
         <label for="buyer-name">Họ và tên <span>*</span></label>
         <input
@@ -179,7 +191,6 @@
           placeholder="Nhập số điện thoại liên hệ"
           required
           maxlength="20"
-          pattern="[+0-9() .\-]{9,20}"
           title="Nhập số điện thoại gồm 9–20 ký tự, có thể có dấu +, khoảng trắng hoặc dấu gạch ngang."
         />
         <label for="buyer-address">Địa chỉ nhận hàng <span>*</span></label>
@@ -227,7 +238,14 @@
             ><strong id="purchase-total" aria-live="polite"></strong>
           </div>
         </div>
-        <div class="order-breakdown"><div><span>Tiền hàng</span><strong id="purchase-subtotal"></strong></div><div><span>Phí vận chuyển</span><strong id="purchase-shipping"></strong></div></div>
+        <div class="order-breakdown">
+          <div>
+            <span>Tiền hàng</span><strong id="purchase-subtotal"></strong>
+          </div>
+          <div>
+            <span>Phí vận chuyển</span><strong id="purchase-shipping"></strong>
+          </div>
+        </div>
         <p id="quantity-error" class="field-error" role="status" hidden>
           Vui lòng nhập số lượng nguyên từ 1 đến 3.
         </p>
