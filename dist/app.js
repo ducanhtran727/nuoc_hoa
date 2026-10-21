@@ -17,6 +17,17 @@ const products = [
     "saleType": "full"
   },
   {
+    "id": 36,
+    "brand": "Chanel",
+    "name": "Coco Mademoiselle EDP",
+    "price": 150000,
+    "gender": "female",
+    "image": "assets/catalog/coco-mademoiselle-new.webp",
+    "inStock": true,
+    "volume": "Chiết 10ml",
+    "saleType": "decant"
+  },
+  {
     "id": 33,
     "brand": "Gucci",
     "name": "Bloom EDP",
@@ -27,6 +38,17 @@ const products = [
     "inStock": true,
     "volume": "Chai lớn",
     "saleType": "full"
+  },
+  {
+    "id": 37,
+    "brand": "Gucci",
+    "name": "Bloom EDP",
+    "price": 150000,
+    "gender": "female",
+    "image": "assets/catalog/gucci-bloom-new.webp",
+    "inStock": true,
+    "volume": "Chiết 10ml",
+    "saleType": "decant"
   },
   {
     "id": 34,
@@ -41,6 +63,17 @@ const products = [
     "saleType": "full"
   },
   {
+    "id": 38,
+    "brand": "Chanel",
+    "name": "Bleu de Chanel EDP",
+    "price": 150000,
+    "gender": "male",
+    "image": "assets/catalog/bleu-de-chanel-new.webp",
+    "inStock": true,
+    "volume": "Chiết 10ml",
+    "saleType": "decant"
+  },
+  {
     "id": 35,
     "brand": "Dior",
     "name": "Sauvage EDT",
@@ -51,39 +84,6 @@ const products = [
     "inStock": true,
     "volume": "Chai lớn",
     "saleType": "full"
-  },
-  {
-    "id": 36,
-    "brand": "Chanel",
-    "name": "Coco Mademoiselle EDP",
-    "price": 150000,
-    "gender": "female",
-    "image": "assets/catalog/coco-mademoiselle-new.webp",
-    "inStock": true,
-    "volume": "Chiết 10ml",
-    "saleType": "decant"
-  },
-  {
-    "id": 37,
-    "brand": "Gucci",
-    "name": "Bloom EDP",
-    "price": 150000,
-    "gender": "female",
-    "image": "assets/catalog/gucci-bloom-new.webp",
-    "inStock": true,
-    "volume": "Chiết 10ml",
-    "saleType": "decant"
-  },
-  {
-    "id": 38,
-    "brand": "Chanel",
-    "name": "Bleu de Chanel EDP",
-    "price": 150000,
-    "gender": "male",
-    "image": "assets/catalog/bleu-de-chanel-new.webp",
-    "inStock": true,
-    "volume": "Chiết 10ml",
-    "saleType": "decant"
   },
   {
     "id": 39,
