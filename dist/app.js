@@ -461,7 +461,7 @@ function quote(quantity, product = selectedProduct) {
     throw new RangeError("Số lượng phải từ 1 đến 3.");
   if (!product || !product.inStock) throw new Error("Sản phẩm đã hết hàng.");
   const subtotal = product.saleType === "full" ? product.price * Number(quantity) : {1:150000,2:289000,3:399000}[quantity];
-  const shipping = 0;
+  const shipping = Number(quantity) === 1 ? 22000 : 0;
   return { subtotal, shipping, total: subtotal + shipping };
 }
 function updateTotal() {
@@ -480,6 +480,11 @@ function updateTotal() {
       : "Miễn phí"
     : "—";
   $("#purchase-total").textContent = price ? money(price.total) : "—";
+  document.querySelectorAll('[data-offer]').forEach(button => {
+    const active = valid && Number(button.dataset.offer) === Number(input.value);
+    button.classList.toggle('selected', active);
+    button.setAttribute('aria-pressed', String(active));
+  });
   $("#quantity-minus").disabled = valid && Number(input.value) <= 1;
   $("#quantity-plus").disabled = valid && Number(input.value) >= 3;
 }
@@ -496,7 +501,10 @@ function openPurchase(id) {
   $("#purchase-brand").textContent = product.brand;
   $("#purchase-name").textContent = product.name + " · " + product.volume;
   $("#purchase-price").textContent = money(product.price);
-  $("#purchase-offer").textContent = product.saleType === "full" ? "Chai lớn tính giá theo số lượng. Miễn phí vận chuyển." : "Chiết 10ml: 1 chai 150.000đ · 2 chai 289.000đ · 3 chai 399.000đ. Miễn phí vận chuyển.";
+  $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng ưu đãi</div><div class="offer-grid">${[1,2,3].map(q => {
+    const price = quote(q, product);
+    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q === 1 ? 'Mua 1 chai' : `Combo ${q} chai`}</span><strong>${money(price.subtotal)}</strong><small>${q === 1 ? '+ 22.000đ phí ship' : 'MIỄN PHÍ SHIP'}</small></button>`;
+  }).join('')}</div>`;
   updateTotal();
   $("#purchase").showModal();
   $("#purchase").scrollTop = 0;
@@ -646,13 +654,18 @@ $("#quantity-minus").onclick = () => stepQuantity(-1);
 $("#quantity-plus").onclick = () => stepQuantity(1);
 
 document.addEventListener("click", (e) => {
+  const offer = e.target.closest('[data-offer]');
+  if (offer && !isSubmitting) {
+    $('#quantity').value = offer.dataset.offer;
+    updateTotal();
+  }
   const buy = e.target.closest("[data-buy]");
   if (buy) openPurchase(Number(buy.dataset.buy));
   const detail = e.target.closest("[data-detail]");
   if (detail) {
     const p = products.find(p => p.id === Number(detail.dataset.detail));
     $("#detail-content").innerHTML =
-      `<img class="detail-img" src="${p.image}" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.volume}</p><div class="prices"><strong>${money(p.price)}</strong>${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ""}</div><p class="demo-note">${p.inStock ? (p.saleType === "full" ? "Chai lớn tính giá theo số lượng. Miễn phí ship." : "Chiết 10ml: 1 chai 150k, 2 chai 289k, 3 chai 399k. Miễn phí ship.") : "Sản phẩm hiện đã hết hàng."}</p><button class="button" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></div>`;
+      `<img class="detail-img" src="${p.image}" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.volume}</p><div class="prices"><strong>${money(p.price)}</strong>${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ""}</div><p class="demo-note">${p.inStock ? (p.saleType === "full" ? "Mua 1 chai + 22.000đ phí ship. Mua từ 2 chai miễn phí ship." : "Chiết 10ml: 1 chai 150k + 22k ship; combo 2 chai 289k, 3 chai 399k miễn phí ship.") : "Sản phẩm hiện đã hết hàng."}</p><button class="button" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></div>`;
     $("#detail").showModal();
   }
   const close = e.target.closest(".close");
