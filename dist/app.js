@@ -501,9 +501,9 @@ function openPurchase(id) {
   $("#purchase-brand").textContent = product.brand;
   $("#purchase-name").textContent = product.name + " · " + product.volume;
   $("#purchase-price").textContent = money(product.price);
-  $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng ưu đãi</div><div class="offer-grid">${[1,2,3].map(q => {
+  $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng</div><div class="offer-grid">${[1,2,3].map(q => {
     const price = quote(q, product);
-    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q === 1 ? 'Mua 1 chai' : `Combo ${q} chai`}</span><strong>${money(price.subtotal)}</strong><small>${q === 1 ? '+ 22.000đ phí ship' : 'MIỄN PHÍ SHIP'}</small></button>`;
+    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} chai</span><strong>${(price.subtotal / 1000).toLocaleString("vi-VN")}k</strong><small>${q === 1 ? '+22k ship' : 'Free ship'}</small></button>`;
   }).join('')}</div>`;
   updateTotal();
   $("#purchase").showModal();
