@@ -8,52 +8,92 @@ const products = [
     "id": 32,
     "brand": "Chanel",
     "name": "Coco Mademoiselle EDP",
-    "price": 150000,
+    "price": 1200000,
     "oldPrice": 4500000,
     "gender": "female",
     "image": "assets/catalog/coco-mademoiselle-new.webp",
     "inStock": true,
-    "volume": "Chiết 10ml",
-    "fullPrice": 1200000,
-    "saleType": "decant"
+    "volume": "Chai lớn",
+    "saleType": "full"
   },
   {
     "id": 33,
     "brand": "Gucci",
     "name": "Bloom EDP",
-    "price": 150000,
+    "price": 1150000,
     "oldPrice": 3200000,
     "gender": "female",
     "image": "assets/catalog/gucci-bloom-new.webp",
     "inStock": true,
-    "volume": "Chiết 10ml",
-    "fullPrice": 1150000,
-    "saleType": "decant"
+    "volume": "Chai lớn",
+    "saleType": "full"
   },
   {
     "id": 34,
     "brand": "Chanel",
     "name": "Bleu de Chanel EDP",
-    "price": 150000,
+    "price": 1200000,
     "oldPrice": 6200000,
     "gender": "male",
     "image": "assets/catalog/bleu-de-chanel-new.webp",
     "inStock": true,
-    "volume": "Chiết 10ml",
-    "fullPrice": 1200000,
-    "saleType": "decant"
+    "volume": "Chai lớn",
+    "saleType": "full"
   },
   {
     "id": 35,
     "brand": "Dior",
     "name": "Sauvage EDT",
-    "price": 150000,
+    "price": 1100000,
     "oldPrice": 3800000,
     "gender": "male",
     "image": "assets/catalog/dior-sauvage-new.webp",
     "inStock": true,
+    "volume": "Chai lớn",
+    "saleType": "full"
+  },
+  {
+    "id": 36,
+    "brand": "Chanel",
+    "name": "Coco Mademoiselle EDP",
+    "price": 150000,
+    "gender": "female",
+    "image": "assets/catalog/coco-mademoiselle-new.webp",
+    "inStock": true,
     "volume": "Chiết 10ml",
-    "fullPrice": 1100000,
+    "saleType": "decant"
+  },
+  {
+    "id": 37,
+    "brand": "Gucci",
+    "name": "Bloom EDP",
+    "price": 150000,
+    "gender": "female",
+    "image": "assets/catalog/gucci-bloom-new.webp",
+    "inStock": true,
+    "volume": "Chiết 10ml",
+    "saleType": "decant"
+  },
+  {
+    "id": 38,
+    "brand": "Chanel",
+    "name": "Bleu de Chanel EDP",
+    "price": 150000,
+    "gender": "male",
+    "image": "assets/catalog/bleu-de-chanel-new.webp",
+    "inStock": true,
+    "volume": "Chiết 10ml",
+    "saleType": "decant"
+  },
+  {
+    "id": 39,
+    "brand": "Dior",
+    "name": "Sauvage EDT",
+    "price": 150000,
+    "gender": "male",
+    "image": "assets/catalog/dior-sauvage-new.webp",
+    "inStock": true,
+    "volume": "Chiết 10ml",
     "saleType": "decant"
   },
   {
@@ -404,7 +444,7 @@ function render() {
         (p) => `<article class="product ${p.inStock ? "" : "sold-out"}">
         <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy" decoding="async" width="960" height="960"></button>
         <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · ${p.volume}</div>
-        <div class="prices"><strong>${money(p.price)}</strong>${p.inStock ? `<span class="bundle-hint">/ chiết 10ml</span><span class="full-price">Chai lớn ${money(p.fullPrice)} <del>${money(p.oldPrice)}</del></span>` : ""}</div>
+        <div class="prices"><strong>${money(p.price)}</strong>${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ""}</div>
         <button class="buy" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></article>`,
       )
       .join("") ||
@@ -450,14 +490,13 @@ function openPurchase(id) {
   if ($("#detail").open) $("#detail").close();
   selectedProduct = { ...product };
   $("#purchase-form").reset();
-  $("#purchase-variant").innerHTML = `<option value="decant">Chiết 10ml — ${money(product.price)}</option><option value="full">Chai lớn — ${money(product.fullPrice)}</option>`;
   $("#purchase-status").textContent = "";
   $("#purchase-image").src = product.image;
   $("#purchase-image").alt = product.brand + " " + product.name;
   $("#purchase-brand").textContent = product.brand;
   $("#purchase-name").textContent = product.name + " · " + product.volume;
   $("#purchase-price").textContent = money(product.price);
-  $("#purchase-offer").textContent = "Chiết 10ml: 1 chai 150.000đ · 2 chai 289.000đ · 3 chai 399.000đ. Miễn phí vận chuyển.";
+  $("#purchase-offer").textContent = product.saleType === "full" ? "Chai lớn tính giá theo số lượng. Miễn phí vận chuyển." : "Chiết 10ml: 1 chai 150.000đ · 2 chai 289.000đ · 3 chai 399.000đ. Miễn phí vận chuyển.";
   updateTotal();
   $("#purchase").showModal();
   $("#purchase").scrollTop = 0;
@@ -602,16 +641,6 @@ for (const selector of ["#buyer-name", "#buyer-phone", "#buyer-address"]) {
     $(selector).setCustomValidity(""),
   );
 }
-$('#purchase-variant').addEventListener('change', () => {
-  if (!selectedProduct || isSubmitting) return;
-  const original = products.find(p => p.id === selectedProduct.id);
-  const full = $('#purchase-variant').value === 'full';
-  selectedProduct = { ...original, saleType: full ? 'full' : 'decant', price: full ? original.fullPrice : original.price, volume: full ? 'Chai lớn' : 'Chiết 10ml' };
-  $('#purchase-name').textContent = selectedProduct.name + ' · ' + selectedProduct.volume;
-  $('#purchase-price').textContent = money(selectedProduct.price);
-  $('#purchase-offer').textContent = full ? 'Miễn phí vận chuyển. Giá chai lớn tính theo số lượng.' : 'Chiết 10ml: 1 chai 150.000đ · 2 chai 289.000đ · 3 chai 399.000đ. Miễn phí vận chuyển.';
-  updateTotal();
-});
 $("#quantity").addEventListener("input", updateTotal);
 $("#quantity-minus").onclick = () => stepQuantity(-1);
 $("#quantity-plus").onclick = () => stepQuantity(1);
@@ -623,7 +652,7 @@ document.addEventListener("click", (e) => {
   if (detail) {
     const p = products.find(p => p.id === Number(detail.dataset.detail));
     $("#detail-content").innerHTML =
-      `<img class="detail-img" src="${p.image}" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.volume}</p><div class="prices"><strong>${money(p.price)}</strong>${p.inStock ? `<span class="bundle-hint">/ chiết 10ml</span><span class="full-price">Chai lớn ${money(p.fullPrice)} <del>${money(p.oldPrice)}</del></span>` : ""}</div><p class="demo-note">${p.inStock ? "Miễn phí ship. Chiết 10ml: 1 chai 150k, 2 chai 289k, 3 chai 399k. Chai lớn tính giá riêng theo số lượng." : "Sản phẩm hiện đã hết hàng."}</p><button class="button" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></div>`;
+      `<img class="detail-img" src="${p.image}" alt="${p.name}"><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.volume}</p><div class="prices"><strong>${money(p.price)}</strong>${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ""}</div><p class="demo-note">${p.inStock ? (p.saleType === "full" ? "Chai lớn tính giá theo số lượng. Miễn phí ship." : "Chiết 10ml: 1 chai 150k, 2 chai 289k, 3 chai 399k. Miễn phí ship.") : "Sản phẩm hiện đã hết hàng."}</p><button class="button" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></div>`;
     $("#detail").showModal();
   }
   const close = e.target.closest(".close");
