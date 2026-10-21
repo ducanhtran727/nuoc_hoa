@@ -122,7 +122,7 @@
           </div>
         </div>
         <div class="results">
-          <span id="result-count"></span><span>ĐỒNG GIÁ TẤT CẢ MẪU</span>
+          <span id="result-count"></span><span>4 MẪU ĐANG CÒN HÀNG</span>
         </div>
         <div class="grid" id="products"></div>
         <div class="more-wrap">
@@ -185,7 +185,7 @@
         <button type="button" class="close" aria-label="Đóng">×</button>
       </div>
       <div class="purchase-product">
-        <img id="purchase-image" src="assets/catalog/perfume-00.webp" alt="" />
+        <img id="purchase-image" src="assets/catalog/coco-mademoiselle-new.webp" alt="" />
         <div>
           <div class="eyebrow" id="purchase-brand"></div>
           <h3 id="purchase-name"></h3>
@@ -193,23 +193,9 @@
         </div>
       </div>
       <form id="purchase-form">
-        <fieldset class="bundle-options">
-          <legend>Chọn ưu đãi · Đồng giá tất cả mẫu</legend>
-          <button
-            type="button"
-            data-bundle="1"
-            aria-pressed="true"
-            class="active"
-          >
-            <b>1 chai · 150.000đ</b><span>+ 22.000đ ship</span>
-          </button>
-          <button type="button" data-bundle="2" aria-pressed="false">
-            <b>2 chai · 289.000đ</b><span>Miễn phí ship</span>
-          </button>
-          <button type="button" data-bundle="3" aria-pressed="false">
-            <b>3 chai · 399.000đ</b><span>Miễn phí ship</span>
-          </button>
-        </fieldset>
+        <label for="purchase-variant">Chọn loại sản phẩm</label>
+        <select id="purchase-variant" name="variant"><option value="decant">Chiết 10ml</option><option value="full">Chai lớn</option></select>
+        <p id="purchase-offer" class="demo-note"></p>
         <label for="buyer-name">Họ và tên <span>*</span></label>
         <input
           id="buyer-name"
