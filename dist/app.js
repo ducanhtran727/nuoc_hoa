@@ -13,7 +13,7 @@ const products = [
     "gender": "female",
     "image": "assets/catalog/coco-mademoiselle-new.webp",
     "inStock": true,
-    "volume": "Chai lớn",
+    "volume": "Chai 100ml",
     "saleType": "full"
   },
   {
@@ -36,7 +36,7 @@ const products = [
     "gender": "female",
     "image": "assets/catalog/gucci-bloom-new.webp",
     "inStock": true,
-    "volume": "Chai lớn",
+    "volume": "Chai 100ml",
     "saleType": "full"
   },
   {
@@ -59,7 +59,7 @@ const products = [
     "gender": "male",
     "image": "assets/catalog/bleu-de-chanel-new.webp",
     "inStock": true,
-    "volume": "Chai lớn",
+    "volume": "Chai 100ml",
     "saleType": "full"
   },
   {
@@ -82,7 +82,7 @@ const products = [
     "gender": "male",
     "image": "assets/catalog/dior-sauvage-new.webp",
     "inStock": true,
-    "volume": "Chai lớn",
+    "volume": "Chai 100ml",
     "saleType": "full"
   },
   {
