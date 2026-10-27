@@ -9,480 +9,435 @@ const products = [
     "brand": "Yves Saint Laurent",
     "name": "Y EDP",
     "gender": "male",
-    "price": 2900000,
-    "comboPrice": 5800000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/ysl-y-1.webp",
     "images": [
       "assets/catalog-20261027/ysl-y-1.webp",
       "assets/catalog-20261027/ysl-y-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 101,
-    "brand": "Yves Saint Laurent",
-    "name": "Y EDP",
-    "gender": "male",
+    "inStock": true,
     "price": 280000,
-    "comboPrice": 500000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/ysl-y-1.webp",
-    "images": [
-      "assets/catalog-20261027/ysl-y-1.webp",
-      "assets/catalog-20261027/ysl-y-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2900000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 280000,
+        "comboPrice": 500000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2900000,
+        "comboPrice": 5800000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 102,
     "brand": "Yves Saint Laurent",
     "name": "MYSLF EDP",
     "gender": "male",
-    "price": 2500000,
-    "comboPrice": 5000000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/ysl-myslf-1.webp",
     "images": [
       "assets/catalog-20261027/ysl-myslf-1.webp",
       "assets/catalog-20261027/ysl-myslf-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 103,
-    "brand": "Yves Saint Laurent",
-    "name": "MYSLF EDP",
-    "gender": "male",
+    "inStock": true,
     "price": 229000,
-    "comboPrice": 440000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/ysl-myslf-1.webp",
-    "images": [
-      "assets/catalog-20261027/ysl-myslf-1.webp",
-      "assets/catalog-20261027/ysl-myslf-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2500000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 229000,
+        "comboPrice": 440000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2500000,
+        "comboPrice": 5000000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 104,
     "brand": "Xerjoff",
     "name": "1861 Naxos EDP",
     "gender": "unisex",
-    "price": 4500000,
-    "comboPrice": 9000000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/xerjoff-naxos-1.webp",
     "images": [
       "assets/catalog-20261027/xerjoff-naxos-1.webp",
       "assets/catalog-20261027/xerjoff-naxos-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 105,
-    "brand": "Xerjoff",
-    "name": "1861 Naxos EDP",
-    "gender": "unisex",
+    "inStock": true,
     "price": 390000,
-    "comboPrice": 700000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/xerjoff-naxos-1.webp",
-    "images": [
-      "assets/catalog-20261027/xerjoff-naxos-1.webp",
-      "assets/catalog-20261027/xerjoff-naxos-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 4500000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 390000,
+        "comboPrice": 700000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 4500000,
+        "comboPrice": 9000000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 106,
     "brand": "Tom Ford",
     "name": "Ombré Leather EDP",
     "gender": "unisex",
-    "price": 3200000,
-    "comboPrice": 6400000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
     "images": [
       "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
       "assets/catalog-20261027/tom-ford-ombre-leather-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 107,
-    "brand": "Tom Ford",
-    "name": "Ombré Leather EDP",
-    "gender": "unisex",
+    "inStock": true,
     "price": 299000,
-    "comboPrice": 598000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
-    "images": [
-      "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
-      "assets/catalog-20261027/tom-ford-ombre-leather-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 3200000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 299000,
+        "comboPrice": 598000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 3200000,
+        "comboPrice": 6400000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 108,
     "brand": "Parfums de Marly",
     "name": "Delina Exclusif Parfum",
     "gender": "female",
-    "price": 6000000,
-    "comboPrice": 12000000,
-    "volume": "Chai 75ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/delina-exclusif-1.webp",
     "images": [
       "assets/catalog-20261027/delina-exclusif-1.webp",
       "assets/catalog-20261027/delina-exclusif-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 109,
-    "brand": "Parfums de Marly",
-    "name": "Delina Exclusif Parfum",
-    "gender": "female",
+    "inStock": true,
     "price": 500000,
-    "comboPrice": 1000000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/delina-exclusif-1.webp",
-    "images": [
-      "assets/catalog-20261027/delina-exclusif-1.webp",
-      "assets/catalog-20261027/delina-exclusif-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 6000000,
+    "volume": "10ml / 75ml",
+    "variants": [
+      {
+        "price": 500000,
+        "comboPrice": 1000000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 6000000,
+        "comboPrice": 12000000,
+        "volume": "Chai 75ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 110,
     "brand": "Le Labo",
     "name": "Another 13 EDP",
     "gender": "unisex",
-    "price": 6500000,
-    "comboPrice": 13000000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/another-13-1.webp",
     "images": [
       "assets/catalog-20261027/another-13-1.webp",
       "assets/catalog-20261027/another-13-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 111,
-    "brand": "Le Labo",
-    "name": "Another 13 EDP",
-    "gender": "unisex",
+    "inStock": true,
     "price": 550000,
-    "comboPrice": 1000000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/another-13-1.webp",
-    "images": [
-      "assets/catalog-20261027/another-13-1.webp",
-      "assets/catalog-20261027/another-13-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 6500000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 550000,
+        "comboPrice": 1000000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 6500000,
+        "comboPrice": 13000000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 112,
     "brand": "Jean Paul Gaultier",
     "name": "Le Male Le Parfum EDP Intense",
     "gender": "male",
-    "price": 2500000,
-    "comboPrice": 5000000,
-    "volume": "Chai 75ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/le-male-le-parfum-1.webp",
     "images": [
       "assets/catalog-20261027/le-male-le-parfum-1.webp",
       "assets/catalog-20261027/le-male-le-parfum-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 113,
-    "brand": "Jean Paul Gaultier",
-    "name": "Le Male Le Parfum EDP Intense",
-    "gender": "male",
+    "inStock": true,
     "price": 269000,
-    "comboPrice": 500000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/le-male-le-parfum-1.webp",
-    "images": [
-      "assets/catalog-20261027/le-male-le-parfum-1.webp",
-      "assets/catalog-20261027/le-male-le-parfum-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2500000,
+    "volume": "10ml / 75ml",
+    "variants": [
+      {
+        "price": 269000,
+        "comboPrice": 500000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2500000,
+        "comboPrice": 5000000,
+        "volume": "Chai 75ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 114,
     "brand": "Gucci",
     "name": "Bloom EDP",
     "gender": "female",
-    "price": 2200000,
-    "comboPrice": 4400000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/gucci-bloom-1.webp",
     "images": [
       "assets/catalog-20261027/gucci-bloom-1.webp",
       "assets/catalog-20261027/gucci-bloom-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 115,
-    "brand": "Gucci",
-    "name": "Bloom EDP",
-    "gender": "female",
+    "inStock": true,
     "price": 250000,
-    "comboPrice": 450000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/gucci-bloom-1.webp",
-    "images": [
-      "assets/catalog-20261027/gucci-bloom-1.webp",
-      "assets/catalog-20261027/gucci-bloom-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2200000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 250000,
+        "comboPrice": 450000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2200000,
+        "comboPrice": 4400000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 116,
     "brand": "Dior",
     "name": "Sauvage EDP",
     "gender": "male",
-    "price": 2900000,
-    "comboPrice": 5800000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/dior-sauvage-1.webp",
     "images": [
       "assets/catalog-20261027/dior-sauvage-1.webp",
       "assets/catalog-20261027/dior-sauvage-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 117,
-    "brand": "Dior",
-    "name": "Sauvage EDP",
-    "gender": "male",
+    "inStock": true,
     "price": 270000,
-    "comboPrice": 500000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/dior-sauvage-1.webp",
-    "images": [
-      "assets/catalog-20261027/dior-sauvage-1.webp",
-      "assets/catalog-20261027/dior-sauvage-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2900000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 270000,
+        "comboPrice": 500000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2900000,
+        "comboPrice": 5800000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 118,
     "brand": "Dior",
     "name": "Homme Intense EDP",
     "gender": "male",
-    "price": 2900000,
-    "comboPrice": 5800000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/dior-homme-intense-1.webp",
     "images": [
       "assets/catalog-20261027/dior-homme-intense-1.webp",
       "assets/catalog-20261027/dior-homme-intense-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 119,
-    "brand": "Dior",
-    "name": "Homme Intense EDP",
-    "gender": "male",
+    "inStock": true,
     "price": 279000,
-    "comboPrice": 550000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/dior-homme-intense-1.webp",
-    "images": [
-      "assets/catalog-20261027/dior-homme-intense-1.webp",
-      "assets/catalog-20261027/dior-homme-intense-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2900000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 279000,
+        "comboPrice": 550000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2900000,
+        "comboPrice": 5800000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 120,
     "brand": "Chanel",
     "name": "N°5 L’Eau EDT",
     "gender": "female",
-    "price": 3500000,
-    "comboPrice": 7000000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/chanel-no5-leau-1.webp",
     "images": [
       "assets/catalog-20261027/chanel-no5-leau-1.webp",
       "assets/catalog-20261027/chanel-no5-leau-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 121,
-    "brand": "Chanel",
-    "name": "N°5 L’Eau EDT",
-    "gender": "female",
+    "inStock": true,
     "price": 359000,
-    "comboPrice": 650000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/chanel-no5-leau-1.webp",
-    "images": [
-      "assets/catalog-20261027/chanel-no5-leau-1.webp",
-      "assets/catalog-20261027/chanel-no5-leau-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 3500000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 359000,
+        "comboPrice": 650000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 3500000,
+        "comboPrice": 7000000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 122,
     "brand": "Chanel",
     "name": "Coco Mademoiselle L’Eau Privée",
     "gender": "female",
-    "price": 4500000,
-    "comboPrice": 9000000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/coco-leau-privee-1.webp",
     "images": [
       "assets/catalog-20261027/coco-leau-privee-1.webp",
       "assets/catalog-20261027/coco-leau-privee-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 123,
-    "brand": "Chanel",
-    "name": "Coco Mademoiselle L’Eau Privée",
-    "gender": "female",
+    "inStock": true,
     "price": 350000,
-    "comboPrice": 650000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/coco-leau-privee-1.webp",
-    "images": [
-      "assets/catalog-20261027/coco-leau-privee-1.webp",
-      "assets/catalog-20261027/coco-leau-privee-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 4500000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 350000,
+        "comboPrice": 650000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 4500000,
+        "comboPrice": 9000000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 124,
     "brand": "Chanel",
     "name": "Bleu de Chanel EDP",
     "gender": "male",
-    "price": 4300000,
-    "comboPrice": 8600000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/bleu-de-chanel-1.webp",
     "images": [
       "assets/catalog-20261027/bleu-de-chanel-1.webp",
       "assets/catalog-20261027/bleu-de-chanel-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 125,
-    "brand": "Chanel",
-    "name": "Bleu de Chanel EDP",
-    "gender": "male",
+    "inStock": true,
     "price": 380000,
-    "comboPrice": 700000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/bleu-de-chanel-1.webp",
-    "images": [
-      "assets/catalog-20261027/bleu-de-chanel-1.webp",
-      "assets/catalog-20261027/bleu-de-chanel-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 4300000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 380000,
+        "comboPrice": 700000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 4300000,
+        "comboPrice": 8600000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 126,
     "brand": "Dior",
     "name": "Miss Dior Blooming Bouquet EDT",
     "gender": "female",
-    "price": 2900000,
-    "comboPrice": 5800000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
     "images": [
       "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
       "assets/catalog-20261027/miss-dior-blooming-bouquet-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 127,
-    "brand": "Dior",
-    "name": "Miss Dior Blooming Bouquet EDT",
-    "gender": "female",
+    "inStock": true,
     "price": 220000,
-    "comboPrice": 400000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
-    "images": [
-      "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
-      "assets/catalog-20261027/miss-dior-blooming-bouquet-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2900000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 220000,
+        "comboPrice": 400000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2900000,
+        "comboPrice": 5800000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   },
   {
     "id": 128,
     "brand": "Gucci",
     "name": "Flora Gorgeous Gardenia EDP",
     "gender": "female",
-    "price": 2900000,
-    "comboPrice": 5800000,
-    "volume": "Chai 100ml",
-    "saleType": "full",
     "image": "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
     "images": [
       "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
       "assets/catalog-20261027/gucci-flora-gardenia-2.webp"
     ],
-    "inStock": true
-  },
-  {
-    "id": 129,
-    "brand": "Gucci",
-    "name": "Flora Gorgeous Gardenia EDP",
-    "gender": "female",
+    "inStock": true,
     "price": 250000,
-    "comboPrice": 480000,
-    "volume": "Chiết 10ml",
-    "saleType": "decant",
-    "image": "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
-    "images": [
-      "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
-      "assets/catalog-20261027/gucci-flora-gardenia-2.webp"
-    ],
-    "inStock": true
+    "maxPrice": 2900000,
+    "volume": "10ml / 100ml",
+    "variants": [
+      {
+        "price": 250000,
+        "comboPrice": 480000,
+        "volume": "Chiết 10ml",
+        "saleType": "decant"
+      },
+      {
+        "price": 2900000,
+        "comboPrice": 5800000,
+        "volume": "Chai 100ml",
+        "saleType": "full"
+      }
+    ]
   }
 ];
 const money = (n) => n.toLocaleString("vi-VN") + "₫";
@@ -512,7 +467,7 @@ function render() {
         (p) => `<article class="product ${p.inStock ? "" : "sold-out"}">
         <button class="product-image" data-detail="${p.id}" aria-label="Xem ${p.brand} ${p.name}"><span class="tag">${gender[p.gender]}</span><img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy" decoding="async" width="960" height="960"></button>
         <div class="product-brand">${p.brand}</div><h3>${p.name}</h3><div class="product-meta">${gender[p.gender]} · ${p.volume}</div>
-        <div class="prices"><strong>${money(p.price)}</strong>${p.oldPrice ? `<del>${money(p.oldPrice)}</del>` : ""}</div>
+        <div class="prices price-range"><strong>${money(p.price)} – ${money(p.maxPrice)}</strong></div>
         <button class="buy" ${p.inStock ? `data-buy="${p.id}"` : "disabled"}>${p.inStock ? "Mua ngay ↗" : "Hết hàng"}</button></article>`,
       )
       .join("") ||
@@ -520,12 +475,45 @@ function render() {
   $("#more").hidden = list.length <= limit;
 }
 
+let detailProduct = null;
+let detailSize = 'decant';
+function sizeOptions(product, selected, scope) {
+  return `<div class="size-options" role="group" aria-label="Chọn thể tích">${product.variants.map(v => `<button type="button" class="size-option ${v.saleType === selected ? 'selected' : ''}" data-size-choice="${v.saleType}" data-size-scope="${scope}" aria-pressed="${v.saleType === selected}"><span>${v.volume}</span><strong>${money(v.price)}</strong></button>`).join('')}</div>`;
+}
 function openDetail(id) {
-  const p = products.find(product => product.id === id);
-  if (!p) return;
-  $('#detail-content').innerHTML = `<div class="detail-gallery">${p.images.map((src,i) => `<figure><img src="${src}" alt="${p.brand} ${p.name} — ảnh ${i+1}" decoding="async"><figcaption>Ảnh ${i+1} / 2</figcaption></figure>`).join('')}</div><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]} · ${p.volume}</p><div class="prices"><strong>${money(p.price)}</strong></div><p class="detail-offer">1 chai ${money(p.price)} + 22.000đ ship<br>2 chai ${money(p.comboPrice)} · Miễn phí ship</p><button class="button" data-buy="${p.id}">Mua ngay ↗</button></div>`;
+  if (isSubmitting) return;
+  detailProduct = products.find(product => product.id === id);
+  if (!detailProduct) return;
+  detailSize = 'decant';
+  const p = detailProduct;
+  $('#detail-content').innerHTML = `<div class="detail-gallery">${p.images.map((src,i) => `<figure><img src="${src}" alt="${p.brand} ${p.name} — ảnh ${i+1}" decoding="async"><figcaption>Ảnh ${i+1} / 2</figcaption></figure>`).join('')}</div><div class="detail-body"><div class="eyebrow">${p.brand}</div><h2>${p.name}</h2><p>${gender[p.gender]}</p><p id="detail-selected-size"></p><div class="prices"><strong id="detail-price"></strong></div><div id="detail-sizes"></div><p class="detail-offer" id="detail-offer"></p><button class="button" id="detail-buy" data-buy="${p.id}">Mua ngay ↗</button></div>`;
+  updateDetailSize('decant');
   $('#detail').showModal();
   $('#detail').scrollTop = 0;
+}
+function updateDetailSize(size) {
+  const variant = detailProduct?.variants.find(v => v.saleType === size);
+  if (!variant) return;
+  detailSize = size;
+  $('#detail-selected-size').textContent = 'Bạn đang chọn: ' + variant.volume;
+  $('#detail-price').textContent = money(variant.price);
+  $('#detail-sizes').innerHTML = sizeOptions(detailProduct, size, 'detail');
+  $('#detail-offer').textContent = `1 chai ${money(variant.price)} + 22.000đ ship · 2 chai ${money(variant.comboPrice)}, miễn phí ship`;
+  $('#detail-buy').dataset.buySize = size;
+}
+function selectPurchaseSize(size) {
+  const product = products.find(p => p.id === selectedProduct?.id);
+  const variant = product?.variants.find(v => v.saleType === size);
+  if (!variant) return;
+  selectedProduct = { ...product, ...variant };
+  $('#purchase-name').textContent = product.name + ' · ' + variant.volume;
+  $('#purchase-price').textContent = money(variant.price);
+  $('#purchase-sizes').innerHTML = sizeOptions(product, size, 'purchase');
+  $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng</div><div class="offer-grid">${[1,2].map(q => {
+    const price = quote(q);
+    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} chai</span><strong>${(price.subtotal / 1000).toLocaleString('vi-VN')}k</strong><small>${q === 1 ? '+22k ship' : 'Free ship'}</small></button>`;
+  }).join('')}</div>`;
+  updateTotal();
 }
 function validQuantity(value) {
   const quantity = Number(value);
@@ -563,7 +551,7 @@ function updateTotal() {
   $("#quantity-minus").disabled = valid && Number(input.value) <= 1;
   $("#quantity-plus").disabled = valid && Number(input.value) >= 2;
 }
-function openPurchase(id) {
+function openPurchase(id, size = "decant") {
   if (isSubmitting) return;
   const product = products.find(p => p.id === id);
   if (!product || !product.inStock) return;
@@ -576,13 +564,7 @@ function openPurchase(id) {
   $("#purchase-image-second").src = product.images[1];
   $("#purchase-image-second").alt = product.brand + " " + product.name + " — ảnh 2";
   $("#purchase-brand").textContent = product.brand;
-  $("#purchase-name").textContent = product.name + " · " + product.volume;
-  $("#purchase-price").textContent = money(product.price);
-  $('#purchase-offer').innerHTML = `<div class="offer-heading">Chọn số lượng</div><div class="offer-grid">${[1,2].map(q => {
-    const price = quote(q, product);
-    return `<button type="button" class="offer-choice" data-offer="${q}" aria-pressed="false"><span>${q} chai</span><strong>${(price.subtotal / 1000).toLocaleString("vi-VN")}k</strong><small>${q === 1 ? '+22k ship' : 'Free ship'}</small></button>`;
-  }).join('')}</div>`;
-  updateTotal();
+  selectPurchaseSize(size);
   $("#purchase").showModal();
   $("#purchase").scrollTop = 0;
   $("#buyer-name").focus();
@@ -731,13 +713,18 @@ $("#quantity-minus").onclick = () => stepQuantity(-1);
 $("#quantity-plus").onclick = () => stepQuantity(1);
 
 document.addEventListener("click", (e) => {
+  const sizeChoice = e.target.closest('[data-size-choice]');
+  if (sizeChoice && !isSubmitting) {
+    if (sizeChoice.dataset.sizeScope === 'detail') updateDetailSize(sizeChoice.dataset.sizeChoice);
+    else selectPurchaseSize(sizeChoice.dataset.sizeChoice);
+  }
   const offer = e.target.closest('[data-offer]');
   if (offer && !isSubmitting) {
     $('#quantity').value = offer.dataset.offer;
     updateTotal();
   }
   const buy = e.target.closest("[data-buy]");
-  if (buy) openPurchase(Number(buy.dataset.buy));
+  if (buy) openPurchase(Number(buy.dataset.buy), buy.dataset.buySize || "decant");
   const detail = e.target.closest("[data-detail]");
   if (detail) openDetail(Number(detail.dataset.detail));
   const close = e.target.closest(".close");
