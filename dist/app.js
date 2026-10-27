@@ -422,7 +422,7 @@ const products = [
     ],
     "inStock": true,
     "price": 250000,
-    "maxPrice": 2900000,
+    "maxPrice": 2650000,
     "volume": "10ml / 100ml",
     "variants": [
       {
@@ -432,8 +432,8 @@ const products = [
         "saleType": "decant"
       },
       {
-        "price": 2900000,
-        "comboPrice": 5800000,
+        "price": 2650000,
+        "comboPrice": 5300000,
         "volume": "Chai 100ml",
         "saleType": "full"
       }
