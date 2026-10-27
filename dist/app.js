@@ -498,7 +498,7 @@ function updateDetailSize(size) {
   $('#detail-selected-size').textContent = 'Bạn đang chọn: ' + variant.volume;
   $('#detail-price').textContent = money(variant.price);
   $('#detail-sizes').innerHTML = sizeOptions(detailProduct, size, 'detail');
-  $('#detail-offer').textContent = `1 chai ${money(variant.price)} + 22.000đ ship · 2 chai ${money(variant.comboPrice)}, miễn phí ship`;
+  $('#detail-offer').innerHTML = `<span>1 chai ${money(variant.price)} + 22.000đ ship</span><span>2 chai ${money(variant.comboPrice)} · Miễn phí ship</span>`;
   $('#detail-buy').dataset.buySize = size;
 }
 function selectPurchaseSize(size) {
