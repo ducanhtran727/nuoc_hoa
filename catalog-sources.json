@@ -1,322 +1,227 @@
 [
   {
-    "id": 0,
-    "brand": "Chanel",
-    "name": "Bleu de Chanel EDP",
-    "gender": "male",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-00.webp",
-    "source": "Bleu de Chanel Eau de Parfum (EDP)- Nam .jpg"
+    "name": "Yves Saint Laurent Y EDP",
+    "files": [
+      "yves-saint-laurent-y-edp-100ml.jpg",
+      "10ml 280k mua 2 chai 500k freship. 100ml 2tr9 - Nam.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/ysl-y-1.webp",
+      "assets/catalog-20261027/ysl-y-2.webp"
+    ],
+    "decantPrice": 280000,
+    "comboPrice": 500000,
+    "fullPrice": 2900000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 1,
-    "brand": "Carolina Herrera",
-    "name": "Good Girl EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-01.webp",
-    "source": "Carolina Herrera Good Girl EDP - Nữ .jpg"
+    "name": "Yves Saint Laurent MYSLF EDP",
+    "files": [
+      "yves-saint-laurent-myslf-edp-100ml-03.jpg",
+      "10ml 229k mua 2 chai 440k freship. 100ml 2tr5 - Nam.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/ysl-myslf-1.webp",
+      "assets/catalog-20261027/ysl-myslf-2.webp"
+    ],
+    "decantPrice": 229000,
+    "comboPrice": 440000,
+    "fullPrice": 2500000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 2,
-    "brand": "Chanel",
-    "name": "Coco Mademoiselle EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-02.webp",
-    "source": "Chanel Coco Mademoiselle EDP - Nữ.jpg"
+    "name": "Xerjoff 1861 Naxos EDP",
+    "files": [
+      "xerjoff-1861-naxos-edp-100ml.jpg",
+      "10ml 390k mua 2 chai 700k freship. 100ml 4tr5 - Unisex.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/xerjoff-naxos-1.webp",
+      "assets/catalog-20261027/xerjoff-naxos-2.webp"
+    ],
+    "decantPrice": 390000,
+    "comboPrice": 700000,
+    "fullPrice": 4500000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 3,
-    "brand": "Creed",
-    "name": "Aventus",
-    "gender": "male",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-03.webp",
-    "source": "Creed Aventus- Nam.jpg"
+    "name": "Tom Ford Ombré Leather EDP",
+    "files": [
+      "tom-ford-ombre-leather-edp-100ml.jpg",
+      "10ml 299k combo 2lo 598k free ship. 1 Chai 100ml 3tr2 - Unisex .jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
+      "assets/catalog-20261027/tom-ford-ombre-leather-2.webp"
+    ],
+    "decantPrice": 299000,
+    "comboPrice": 598000,
+    "fullPrice": 3200000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 4,
-    "brand": "Dior",
-    "name": "Miss Dior Absolutely Blooming EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-04.webp",
-    "source": "Dior Miss Dior Absolutely Blooming EDP - Nữ .jpg"
+    "name": "Parfums de Marly Delina Exclusif Parfum",
+    "files": [
+      "parfums-de-marly-delina-exclusif-parfum-75ml-01.jpg",
+      "10ml 500k mua 2 chai 1tr freship. 75ml 6tr - Nữ.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/delina-exclusif-1.webp",
+      "assets/catalog-20261027/delina-exclusif-2.webp"
+    ],
+    "decantPrice": 500000,
+    "comboPrice": 1000000,
+    "fullPrice": 6000000,
+    "fullVolumeMl": 75
   },
   {
-    "id": 5,
-    "brand": "Gucci",
-    "name": "Bloom EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-05.webp",
-    "source": "Gucci Bloom Eau de Parfum (EDP) - Nữ.jpg"
+    "name": "Le Labo Another 13 EDP",
+    "files": [
+      "le-labo-another-13-edp-100ml.jpg",
+      "10ml 550k mua 2 chai 1tr freship. 100ml 6tr5 - Unisex.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/another-13-1.webp",
+      "assets/catalog-20261027/another-13-2.webp"
+    ],
+    "decantPrice": 550000,
+    "comboPrice": 1000000,
+    "fullPrice": 6500000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 6,
-    "brand": "Gucci",
-    "name": "Flora Gorgeous Gardenia EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-06.webp",
-    "source": "Gucci Flora Gorgeous Gardenia Eau de Parfum (EDP) - Nữ .jpg"
+    "name": "Jean Paul Gaultier Le Male Le Parfum EDP Intense",
+    "files": [
+      "10ml 269k mua 2 chai 500k freship. 75ml 2tr5 - Nam.jpg",
+      "jean-paul-gaultier-le-male-le-parfum-edp-intense-chiet.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/le-male-le-parfum-1.webp",
+      "assets/catalog-20261027/le-male-le-parfum-2.webp"
+    ],
+    "decantPrice": 269000,
+    "comboPrice": 500000,
+    "fullPrice": 2500000,
+    "fullVolumeMl": 75
   },
   {
-    "id": 7,
-    "brand": "Jean Paul Gaultier",
-    "name": "Le Male Le Parfum EDP Intense",
-    "gender": "male",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-07.webp",
-    "source": "Jean Paul Gaultier Le Male Le Parfum Eau de Parfum Intense - Nam ..jpg"
+    "name": "Gucci Bloom EDP",
+    "files": [
+      "gucci-bloom-edp-100ml.jpg",
+      "10ml 250k mua 2 chai 450k freship. 100ml 2tr2 - Nữ.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/gucci-bloom-1.webp",
+      "assets/catalog-20261027/gucci-bloom-2.webp"
+    ],
+    "decantPrice": 250000,
+    "comboPrice": 450000,
+    "fullPrice": 2200000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 8,
-    "brand": "Jean Paul Gaultier",
-    "name": "So Scandal! EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-08.webp",
-    "source": "Jean Paul Gaultier So Scandal! Eau de Parfum (EDP) - Nữ .jpg"
+    "name": "Dior Sauvage EDP",
+    "files": [
+      "dior-sauvage-edp-60ml-01 (1).jpg",
+      "10ml 270k mua 2 chai 500k freship. 100ml 2tr9 - Nam.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/dior-sauvage-1.webp",
+      "assets/catalog-20261027/dior-sauvage-2.webp"
+    ],
+    "decantPrice": 270000,
+    "comboPrice": 500000,
+    "fullPrice": 2900000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 9,
-    "brand": "Kilian",
-    "name": "Black Phantom Memento Mori",
-    "gender": "unisex",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-09.webp",
-    "source": "Kilian Black Phantom Memento Mori - Unisex.jpg"
+    "name": "Dior Homme Intense EDP",
+    "files": [
+      "dior-homme-intense-edp-100ml.jpg",
+      "10ml 279k mua 2 chai 550k freship. 100ml 2tr9 - Nam .jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/dior-homme-intense-1.webp",
+      "assets/catalog-20261027/dior-homme-intense-2.webp"
+    ],
+    "decantPrice": 279000,
+    "comboPrice": 550000,
+    "fullPrice": 2900000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 10,
-    "brand": "Lancôme",
-    "name": "La Vie Est Belle EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-10.webp",
-    "source": "Lancôme La Vie Est Belle Eau de Parfum (EDP) - Nữ.jpg"
+    "name": "Chanel N°5 L’Eau EDT",
+    "files": [
+      "chanel-no-5-l-eau-edt-100ml-1.jpg",
+      "10ml 359k mua 2 chai 650k freship. 100ml 3tr5 - Nữ.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/chanel-no5-leau-1.webp",
+      "assets/catalog-20261027/chanel-no5-leau-2.webp"
+    ],
+    "decantPrice": 359000,
+    "comboPrice": 650000,
+    "fullPrice": 3500000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 11,
-    "brand": "Le Labo",
-    "name": "Another 13",
-    "gender": "unisex",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-11.webp",
-    "source": "Le Labo Another 13 - Unisex.jpg"
+    "name": "Chanel Coco Mademoiselle L’Eau Privée",
+    "files": [
+      "chanel-coco-mademoiselle-l-eau-privee-100ml-1.jpg",
+      "10ml 350k mua 2 chai 650k freship. 100ml 4tr5 - Nữ.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/coco-leau-privee-1.webp",
+      "assets/catalog-20261027/coco-leau-privee-2.webp"
+    ],
+    "decantPrice": 350000,
+    "comboPrice": 650000,
+    "fullPrice": 4500000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 12,
-    "brand": "Le Labo",
-    "name": "Rose 31",
-    "gender": "unisex",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-12.webp",
-    "source": "Le Labo Rose 31 - Unisex.jpg"
+    "name": "Chanel Bleu de Chanel EDP",
+    "files": [
+      "chanel-bleu-de-chanel-edp-100ml-1.jpg",
+      "10ml 380k mua 2 chai 700k freship. 100ml 4tr3 - Nam.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/bleu-de-chanel-1.webp",
+      "assets/catalog-20261027/bleu-de-chanel-2.webp"
+    ],
+    "decantPrice": 380000,
+    "comboPrice": 700000,
+    "fullPrice": 4300000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 13,
-    "brand": "Le Labo",
-    "name": "Santal 33 EDP",
-    "gender": "unisex",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-13.webp",
-    "source": "Le Labo Santal 33 Eau de Parfum (EDP) - Unisex.jpg"
+    "name": "Dior Miss Dior Blooming Bouquet EDT",
+    "files": [
+      "Miss-Dior-Blooming-Bouquet-EDT-13.jpg",
+      "10ml 220k mua 2 chai 400k freship. 100ml 2tr9 - Nữ.jpg"
+    ],
+    "images": [
+      "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
+      "assets/catalog-20261027/miss-dior-blooming-bouquet-2.webp"
+    ],
+    "decantPrice": 220000,
+    "comboPrice": 400000,
+    "fullPrice": 2900000,
+    "fullVolumeMl": 100
   },
   {
-    "id": 14,
-    "brand": "Maison Francis Kurkdjian",
-    "name": "Baccarat Rouge 540 Extrait de Parfum",
-    "gender": "unisex",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-14.webp",
-    "source": "Maison Francis Kurkdjian Baccarat Rouge 540 Extrait de Parfum - Unisex.jpg"
-  },
-  {
-    "id": 15,
-    "brand": "Montblanc",
-    "name": "Explorer EDP",
-    "gender": "male",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-15.webp",
-    "source": "Montblanc Explorer Eau de Parfum - Nam.jpg"
-  },
-  {
-    "id": 16,
-    "brand": "Narciso Rodriguez",
-    "name": "Pure Musc For Her EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-16.webp",
-    "source": "Narciso Rodriguez Pure Musc For Her EDP - Nữ.jpg"
-  },
-  {
-    "id": 17,
-    "brand": "Kilian",
-    "name": "Good Girl Gone Bad",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-17.webp",
-    "source": "nước hoa Kilian Good Girl Gone Bad - Nữ .jpg"
-  },
-  {
-    "id": 18,
-    "brand": "Dior",
-    "name": "Sauvage",
-    "gender": "male",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-18.webp",
-    "source": "Nước hoa nam Dior Sauvage - Nam.jpg"
-  },
-  {
-    "id": 19,
-    "brand": "Dolce & Gabbana",
-    "name": "Light Blue Eau Intense Pour Femme EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-19.webp",
-    "source": "Nước Hoa Nữ Dolce & Gabbana Light Blue Eau Intense Pour Femme EDP.jpg"
-  },
-  {
-    "id": 20,
-    "brand": "Jean Paul Gaultier",
-    "name": "Scandal À Paris EDT",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-20.webp",
-    "source": "nước hoa nữ Jean Paul Gaultier Scandal A Paris EDT.jpg"
-  },
-  {
-    "id": 21,
-    "brand": "Lancôme",
-    "name": "Trésor Midnight Rose EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-21.webp",
-    "source": "nước hoa nữ Lancôme Trésor Midnight Rose Eau de Parfum (EDP).jpg"
-  },
-  {
-    "id": 22,
-    "brand": "Marc Jacobs",
-    "name": "Daisy Dream EDT",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-22.webp",
-    "source": "Nước hoa nữ Marc Jacobs Daisy Dream Eau de Toilette (EDT).jpg"
-  },
-  {
-    "id": 23,
-    "brand": "Montblanc",
-    "name": "Signature EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-23.webp",
-    "source": "nước hoa nữ Montblanc Signature Eau de Parfum (EDP).jpg"
-  },
-  {
-    "id": 24,
-    "brand": "Narciso Rodriguez",
-    "name": "Ambrée EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-24.webp",
-    "source": "Nước hoa nữ Narciso Rodriguez Ambrée Eau de Parfum (EDP).jpg"
-  },
-  {
-    "id": 25,
-    "brand": "Narciso Rodriguez",
-    "name": "For Her EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-25.webp",
-    "source": "nước hoa nữ Narciso Rodriguez For Her Eau de Parfum (EDP).jpg"
-  },
-  {
-    "id": 26,
-    "brand": "Paco Rabanne",
-    "name": "Pure XS For Her EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-26.webp",
-    "source": "Nước hoa nữ Paco Rabanne Pure XS For Her EDP.jpg"
-  },
-  {
-    "id": 27,
-    "brand": "Parfums de Marly",
-    "name": "Delina",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-27.webp",
-    "source": "nước hoa nữ Parfums de Marly Delina .jpg"
-  },
-  {
-    "id": 28,
-    "brand": "Versace",
-    "name": "Bright Crystal EDT",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-28.webp",
-    "source": "nước hoa nữ Versace Bright Crystal Eau de Toilette (EDT).jpg"
-  },
-  {
-    "id": 29,
-    "brand": "Parfums de Marly",
-    "name": "Valaya EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-29.webp",
-    "source": "Parfums de Marly Valaya Eau de Parfum - Nữ.png"
-  },
-  {
-    "id": 30,
-    "brand": "Yves Saint Laurent",
-    "name": "Libre EDP",
-    "gender": "female",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-30.webp",
-    "source": "Yves Saint Laurent Libre EDP (Eau de Parfum) - Nữ .jpg"
-  },
-  {
-    "id": 31,
-    "brand": "Yves Saint Laurent",
-    "name": "Y EDP",
-    "gender": "male",
-    "price": 150000,
-    "volume": "Chiết 10ml",
-    "image": "assets/catalog/perfume-31.webp",
-    "source": "Yves Saint Laurent Y Eau de Parfum (YSL Y EDP) - NAm .jpg"
+    "name": "Gucci Flora Gorgeous Gardenia EDP",
+    "files": [
+      "gucci-flora-gorgeous-gardenia_5-600x600.jpg",
+      "10ml 250k mua 2 chai 480k freship. 100ml 2tr9- Nữ.png"
+    ],
+    "images": [
+      "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
+      "assets/catalog-20261027/gucci-flora-gardenia-2.webp"
+    ],
+    "decantPrice": 250000,
+    "comboPrice": 480000,
+    "fullPrice": 2900000,
+    "fullVolumeMl": 100
   }
 ]
