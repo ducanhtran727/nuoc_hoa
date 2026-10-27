@@ -9,7 +9,7 @@ const products = [
     "brand": "Yves Saint Laurent",
     "name": "Y EDP",
     "gender": "male",
-    "image": "assets/catalog-20261027/ysl-y-1.webp",
+    "image": "assets/catalog-20261027/ysl-y-2.webp",
     "images": [
       "assets/catalog-20261027/ysl-y-1.webp",
       "assets/catalog-20261027/ysl-y-2.webp"
@@ -38,7 +38,7 @@ const products = [
     "brand": "Yves Saint Laurent",
     "name": "MYSLF EDP",
     "gender": "male",
-    "image": "assets/catalog-20261027/ysl-myslf-1.webp",
+    "image": "assets/catalog-20261027/ysl-myslf-2.webp",
     "images": [
       "assets/catalog-20261027/ysl-myslf-1.webp",
       "assets/catalog-20261027/ysl-myslf-2.webp"
@@ -67,7 +67,7 @@ const products = [
     "brand": "Xerjoff",
     "name": "1861 Naxos EDP",
     "gender": "unisex",
-    "image": "assets/catalog-20261027/xerjoff-naxos-1.webp",
+    "image": "assets/catalog-20261027/xerjoff-naxos-2.webp",
     "images": [
       "assets/catalog-20261027/xerjoff-naxos-1.webp",
       "assets/catalog-20261027/xerjoff-naxos-2.webp"
@@ -96,7 +96,7 @@ const products = [
     "brand": "Tom Ford",
     "name": "Ombré Leather EDP",
     "gender": "unisex",
-    "image": "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
+    "image": "assets/catalog-20261027/tom-ford-ombre-leather-2.webp",
     "images": [
       "assets/catalog-20261027/tom-ford-ombre-leather-1.webp",
       "assets/catalog-20261027/tom-ford-ombre-leather-2.webp"
@@ -125,7 +125,7 @@ const products = [
     "brand": "Parfums de Marly",
     "name": "Delina Exclusif Parfum",
     "gender": "female",
-    "image": "assets/catalog-20261027/delina-exclusif-1.webp",
+    "image": "assets/catalog-20261027/delina-exclusif-2.webp",
     "images": [
       "assets/catalog-20261027/delina-exclusif-1.webp",
       "assets/catalog-20261027/delina-exclusif-2.webp"
@@ -154,7 +154,7 @@ const products = [
     "brand": "Le Labo",
     "name": "Another 13 EDP",
     "gender": "unisex",
-    "image": "assets/catalog-20261027/another-13-1.webp",
+    "image": "assets/catalog-20261027/another-13-2.webp",
     "images": [
       "assets/catalog-20261027/another-13-1.webp",
       "assets/catalog-20261027/another-13-2.webp"
@@ -183,7 +183,7 @@ const products = [
     "brand": "Jean Paul Gaultier",
     "name": "Le Male Le Parfum EDP Intense",
     "gender": "male",
-    "image": "assets/catalog-20261027/le-male-le-parfum-1.webp",
+    "image": "assets/catalog-20261027/le-male-le-parfum-2.webp",
     "images": [
       "assets/catalog-20261027/le-male-le-parfum-1.webp",
       "assets/catalog-20261027/le-male-le-parfum-2.webp"
@@ -212,7 +212,7 @@ const products = [
     "brand": "Gucci",
     "name": "Bloom EDP",
     "gender": "female",
-    "image": "assets/catalog-20261027/gucci-bloom-1.webp",
+    "image": "assets/catalog-20261027/gucci-bloom-2.webp",
     "images": [
       "assets/catalog-20261027/gucci-bloom-1.webp",
       "assets/catalog-20261027/gucci-bloom-2.webp"
@@ -241,7 +241,7 @@ const products = [
     "brand": "Dior",
     "name": "Sauvage EDP",
     "gender": "male",
-    "image": "assets/catalog-20261027/dior-sauvage-1.webp",
+    "image": "assets/catalog-20261027/dior-sauvage-2.webp",
     "images": [
       "assets/catalog-20261027/dior-sauvage-1.webp",
       "assets/catalog-20261027/dior-sauvage-2.webp"
@@ -270,7 +270,7 @@ const products = [
     "brand": "Dior",
     "name": "Homme Intense EDP",
     "gender": "male",
-    "image": "assets/catalog-20261027/dior-homme-intense-1.webp",
+    "image": "assets/catalog-20261027/dior-homme-intense-2.webp",
     "images": [
       "assets/catalog-20261027/dior-homme-intense-1.webp",
       "assets/catalog-20261027/dior-homme-intense-2.webp"
@@ -299,7 +299,7 @@ const products = [
     "brand": "Chanel",
     "name": "N°5 L’Eau EDT",
     "gender": "female",
-    "image": "assets/catalog-20261027/chanel-no5-leau-1.webp",
+    "image": "assets/catalog-20261027/chanel-no5-leau-2.webp",
     "images": [
       "assets/catalog-20261027/chanel-no5-leau-1.webp",
       "assets/catalog-20261027/chanel-no5-leau-2.webp"
@@ -328,7 +328,7 @@ const products = [
     "brand": "Chanel",
     "name": "Coco Mademoiselle L’Eau Privée",
     "gender": "female",
-    "image": "assets/catalog-20261027/coco-leau-privee-1.webp",
+    "image": "assets/catalog-20261027/coco-leau-privee-2.webp",
     "images": [
       "assets/catalog-20261027/coco-leau-privee-1.webp",
       "assets/catalog-20261027/coco-leau-privee-2.webp"
@@ -357,7 +357,7 @@ const products = [
     "brand": "Chanel",
     "name": "Bleu de Chanel EDP",
     "gender": "male",
-    "image": "assets/catalog-20261027/bleu-de-chanel-1.webp",
+    "image": "assets/catalog-20261027/bleu-de-chanel-2.webp",
     "images": [
       "assets/catalog-20261027/bleu-de-chanel-1.webp",
       "assets/catalog-20261027/bleu-de-chanel-2.webp"
@@ -386,7 +386,7 @@ const products = [
     "brand": "Dior",
     "name": "Miss Dior Blooming Bouquet EDT",
     "gender": "female",
-    "image": "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
+    "image": "assets/catalog-20261027/miss-dior-blooming-bouquet-2.webp",
     "images": [
       "assets/catalog-20261027/miss-dior-blooming-bouquet-1.webp",
       "assets/catalog-20261027/miss-dior-blooming-bouquet-2.webp"
@@ -415,7 +415,7 @@ const products = [
     "brand": "Gucci",
     "name": "Flora Gorgeous Gardenia EDP",
     "gender": "female",
-    "image": "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
+    "image": "assets/catalog-20261027/gucci-flora-gardenia-2.webp",
     "images": [
       "assets/catalog-20261027/gucci-flora-gardenia-1.webp",
       "assets/catalog-20261027/gucci-flora-gardenia-2.webp"
@@ -559,7 +559,7 @@ function openPurchase(id, size = "decant") {
   selectedProduct = { ...product };
   $("#purchase-form").reset();
   $("#purchase-status").textContent = "";
-  $("#purchase-image").src = product.image;
+  $("#purchase-image").src = product.images[0];
   $("#purchase-image").alt = product.brand + " " + product.name + " — ảnh 1";
   $("#purchase-image-second").src = product.images[1];
   $("#purchase-image-second").alt = product.brand + " " + product.name + " — ảnh 2";
